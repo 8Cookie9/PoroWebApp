@@ -23,7 +23,7 @@ public class Battle {
     }
     
     private String[] battle(){
-        Random r1=new Random(this.randSeedDuel);
+        Random r1=new Random((long) Math.pow(this.randSeedDuel,3));
         String[] res=new String[2];
         int i1=r1.nextInt(5);
         int i2=r1.nextInt(5);
