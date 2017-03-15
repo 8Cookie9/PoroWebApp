@@ -27,6 +27,9 @@ public class Battle {
         String[] res=new String[2];
         int i1=r1.nextInt(5);
         int i2=r1.nextInt(5);
+        if(this.username.equals(this.targetname)){
+            return new String[]{"practice","false"};
+        }
         if(this.userLv+i1>this.targetLv+i2){
             res[0]=this.username+" "+this.targetname+" win";
         }else if(this.userLv+i1>this.targetLv+i2){
@@ -49,6 +52,9 @@ public class Battle {
     
     public String text(){
         String[] res=this.battle();
+        if(this.username.equals(this.targetname)){
+            return this.username+" didn't manage to find anyone to challenge, and ended up practicing alone gaining 3 exp for their weapon.";
+        }
         String ret=this.username+" fought bravely with "+this.targetname+". After a long time the battle concluded as a ";
         if(res[0].contains("win")){
             ret+=this.username+"'s win, rewarding "+this.username+" with 5 exp for their weapon.";
