@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 public class PoroFactory {
-    private final String filepath="C:/Users/Jaakko/Documents/NetBeansProjects/PoroWebApp/src/main/resources/templates/poro.txt";
+    private final String filepath="C:/Users/Jaakko/Documents/GitHub/PoroWebApp/src/main/resources/templates/poro.txt";
     private HashMap<Integer, List<String[]>> poroes;
     private int randSeed;
     
@@ -46,14 +46,30 @@ public class PoroFactory {
     
     public Poro getPoro(){
         int rarity=this.randomRarity();
-        Random random=new Random(this.randSeed);
+        Random random=new Random((long) Math.pow(this.randSeed, 2));
         List<String[]> porolist=this.poroes.get(rarity);
         Random r=new Random(this.randSeed);
         if(porolist.isEmpty()){
-            return new Poro("Regular Poro",r.nextInt(11),r.nextInt(11),r.nextInt(11),1,1,1,1);
+            return new Poro("Regular Poro",r.nextInt(11),r.nextInt(11),r.nextInt(11),1,1,1,1,getRarity(rarity));
         }
         String[] poroInfo=porolist.get(random.nextInt(porolist.size()));
-        Poro poro=new Poro(poroInfo[0],r.nextInt(11),r.nextInt(11),r.nextInt(11),Integer.parseInt(poroInfo[3]),Integer.parseInt(poroInfo[4]),Integer.parseInt(poroInfo[5]),Integer.parseInt(poroInfo[2]));
+        Poro poro=new Poro(poroInfo[0],r.nextInt(11),r.nextInt(11),r.nextInt(11),Integer.parseInt(poroInfo[3]),Integer.parseInt(poroInfo[4]),Integer.parseInt(poroInfo[5]),Integer.parseInt(poroInfo[2]),getRarity(rarity));
         return poro;
+    }
+    
+    public String getRarity(int i){
+        if(i==1){
+            return "very common";
+        }else if(i==2){
+            return "common";
+        }else if(i==3){
+            return "uncommon";
+        }else if(i==4){
+            return "rare";
+        }else if(i==5){
+            return "ultra rare";
+        }else{
+            return "";
+        }
     }
 }

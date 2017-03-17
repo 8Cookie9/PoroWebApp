@@ -1,9 +1,6 @@
 package com.porowebapp;
 
-import com.datahandling.SetData;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import spark.ModelAndView;
 import spark.Spark;
 import static spark.Spark.*;

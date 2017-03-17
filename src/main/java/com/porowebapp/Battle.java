@@ -24,7 +24,7 @@ public class Battle {
     
     private String[] battle(){
         Random r1=new Random((long) Math.pow(this.randSeedDuel,3));
-        String[] res=new String[2];
+        String[] res=new String[3];
         int i1=r1.nextInt(5);
         int i2=r1.nextInt(5);
         if(this.username.equals(this.targetname)){
@@ -38,10 +38,11 @@ public class Battle {
             res[0]=this.username+" "+this.targetname+" lose";
         }
         if(this.randSeedSteal==99&&this.userLv+i1>this.targetLv+i2){
-                res[1]="true";
-            }else{
-                res[1]="false";
-            }
+            res[1]="true";
+        }else{
+            res[1]="false";
+        }
+        res[2]=""+((this.userLv+i1)-(this.targetLv+i2));
         return res;
     }
     
@@ -55,13 +56,39 @@ public class Battle {
         if(this.username.equals(this.targetname)){
             return this.username+" didn't manage to find anyone to challenge, and ended up practicing alone gaining 3 exp for their weapon.";
         }
-        String ret=this.username+" fought bravely with "+this.targetname+". After a long time the battle concluded as a ";
-        if(res[0].contains("win")){
-            ret+=this.username+"'s win, rewarding "+this.username+" with 5 exp for their weapon.";
-        }else if(res[0].contains("tie")){
-            ret+="tie, rewarding "+this.username+" with 2 exp for their weapon.";
+        String ret=this.username+" challenged "+this.targetname+". ";
+        String winner="";
+        String loser="";
+        if(Integer.parseInt(res[2])==0){
+            return ret+"Both of them appeared to be evenly matched. After a long battle, the result was a tie, rewarding "+this.username+" with 2 exp for their weapon.";
+        }else if(Integer.parseInt(res[2])>0){
+            winner=this.username;
+            loser=this.targetname;
         }else{
-            ret+=this.targetname+"'s win, rewarding "+this.targetname+" with 3 exp for their weapon.";
+            winner=this.targetname;
+            loser=this.username;
+        }
+        if(Integer.parseInt(res[2])>10){
+            ret+="From the very beginning one could see that "+loser+" was not even close to being "+winner+"'s match and the, and thus the result was unsurprisingly "+loser+"'s loss. ";
+            ret+=winner+" gained 5 experience points for their weapon. ";
+        }else if(Integer.parseInt(res[2])>4){
+            ret+="After a short time, it became obvious that it was going to be an uphill battle for "+loser+". In the end, "+loser+"'s valiant efforts were for naught, and "+winner+" ended up getting a relatively easy win. ";
+            ret+=winner+" gained 5 experience points for their weapon. ";
+        }else if(Integer.parseInt(res[2])>0){
+            ret+="The participants were nearly equally matched, but in the end, "+winner+" managed to gain the upper hand and grab the victory. ";
+            ret+=winner+" gained 5 experience points for their weapon. ";
+        }else if(Integer.parseInt(res[2])<-10){
+            ret+="From the very beginning one could see that "+loser+" was not even close to being "+winner+"'s match and the, and thus the result was unsurprisingly "+loser+"'s loss. ";
+            if(new Random().nextInt(3)==0){
+                ret+="While walking away, "+loser+"could faintly hear "+winner+" mutter: 'what a scrub'. ";
+            }
+            ret+=winner+" gained 3 experience points for their weapon. ";
+        }else if(Integer.parseInt(res[2])<-4){
+            ret+="After a short time, it became obvious that it was going to be an uphill battle for "+loser+". In the end, "+loser+"'s valiant efforts were for naught, and "+winner+" ended up getting a relatively easy win. ";
+            ret+=winner+" gained 3 experience points for their weapon. ";
+        }else{
+            ret+="The participants were nearly equally matched, but in the end, "+winner+" managed to gain the upper hand and grab the victory. ";
+            ret+=winner+" gained 3 experience points for their weapon. ";
         }
         if(res[1].equals("true")){
             ret+=" "+this.username+" managed to steal one miscallaneous item from "+this.targetname;
