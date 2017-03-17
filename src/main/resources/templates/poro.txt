@@ -1,0 +1,15 @@
+Regular Poro;1;2;2;2;2
+Poro Artist;1;1;1;3;1
+Poro Cosplayer;1;1;1;1;3
+Pool Party Poro;1;1;3;1;1
+Gentleman Poro;2;1;2;2;2
+Red-Nosed Poro;2;2;3;2;1
+Astronaut Poro;2;3;2;1;4
+Shadow Isles Poro;2;2;3;2;2
+Dragonslayer Poro;3;6;4;3;4
+PROJECT: Poro;3;5;2;4;3
+Battlecast Poro;3;5;2;3;4
+Wizard Poro;3;3;2;6;1
+Dark Star Poro;4;6;3;6;3
+Start Guardian Poro;4;6;4;4;4
+Poro King;5;10;5;5;5

@@ -1,6 +1,9 @@
 package com.porowebapp;
 
+import com.datahandling.SetData;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import spark.ModelAndView;
 import spark.Spark;
 import static spark.Spark.*;
@@ -19,7 +22,7 @@ public class App {
             return new ModelAndView(data, "index");
         }, new ThymeleafTemplateEngine());
         
-        Spark.get("/command/:username/:targetname/:userlv/:targetlv/:randseedduel/:randseedsteal", (req, res) -> {
+        Spark.get("/battle/command/:username/:targetname/:userlv/:targetlv/:randseedduel/:randseedsteal", (req, res) -> {
             HashMap data = new HashMap<>();
             Battle battle=new Battle(req.params(":username"),req.params(":targetname"),Integer.parseInt(req.params(":userlv")),Integer.parseInt(req.params(":targetlv")),Integer.parseInt(req.params(":randseedduel")),Integer.parseInt(req.params(":randseedsteal")));
             data.put("battle", battle);
@@ -27,12 +30,33 @@ public class App {
             return new ModelAndView(data, "command");
         }, new ThymeleafTemplateEngine());
         
-        Spark.get("/text/:username/:targetname/:userlv/:targetlv/:randseedduel/:randseedsteal", (req, res) -> {
+        Spark.get("/battle/text/:username/:targetname/:userlv/:targetlv/:randseedduel/:randseedsteal", (req, res) -> {
             HashMap data = new HashMap<>();
             Battle battle=new Battle(req.params(":username"),req.params(":targetname"),Integer.parseInt(req.params(":userlv")),Integer.parseInt(req.params(":targetlv")),Integer.parseInt(req.params(":randseedduel")),Integer.parseInt(req.params(":randseedsteal")));
             data.put("battle", battle);
 
             return new ModelAndView(data, "text");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/newporo/text/:username/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            PoroFactory p = new PoroFactory(Integer.parseInt(req.params(":seed")));
+            
+            data.put("poro", p.getPoro());
+            data.put("username", req.params(":username"));
+
+
+            return new ModelAndView(data, "PoroText");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/newporo/command/:username/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            PoroFactory p = new PoroFactory(Integer.parseInt(req.params(":seed")));
+            
+            data.put("poro", p.getPoro());
+            data.put("username", req.params(":username"));
+
+            return new ModelAndView(data, "PoroCommand");
         }, new ThymeleafTemplateEngine());
     }
 }
