@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 public class PoroFactory {
-    private final String filepath="C:/Users/Jaakko/Documents/GitHub/PoroWebApp/src/main/resources/templates/poro.txt";
+    private final String filepath="src/main/resources/templates/poro.txt";
     private HashMap<Integer, List<String[]>> poroes;
     private int randSeed;
     private String type;
