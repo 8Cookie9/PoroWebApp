@@ -37,8 +37,9 @@ public class App {
         
         Spark.get("/newporo/text/:username/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
-            PoroFactory p = new PoroFactory(Integer.parseInt(req.params(":seed")));
+            PoroFactory p = new PoroFactory(Integer.parseInt(req.params(":seed")),"newporo",req.params(":username"));
             
+            data.put("command", "newporo");
             data.put("poro", p.getPoro());
             data.put("username", req.params(":username"));
 
@@ -48,8 +49,32 @@ public class App {
         
         Spark.get("/newporo/command/:username/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
-            PoroFactory p = new PoroFactory(Integer.parseInt(req.params(":seed")));
+            PoroFactory p = new PoroFactory(Integer.parseInt(req.params(":seed")),"newporo",req.params(":username"));
             
+            data.put("command", "newporo");
+            data.put("poro", p.getPoro());
+            data.put("username", req.params(":username"));
+
+            return new ModelAndView(data, "PoroCommand");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/firstporo/text/:username/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            PoroFactory p = new PoroFactory(Integer.parseInt(req.params(":seed")),"firstporo",req.params(":username"));
+            
+            data.put("command", "firstporo");
+            data.put("poro", p.getPoro());
+            data.put("username", req.params(":username"));
+
+
+            return new ModelAndView(data, "PoroText");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/firstporo/command/:username/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            PoroFactory p = new PoroFactory(Integer.parseInt(req.params(":seed")),"firstporo",req.params(":username"));
+            
+            data.put("command", "firstporo");
             data.put("poro", p.getPoro());
             data.put("username", req.params(":username"));
 
