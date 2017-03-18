@@ -54,7 +54,7 @@ public class Battle {
     public String text(){
         String[] res=this.battle();
         if(this.username.equals(this.targetname)){
-            return this.username+" didn't manage to find anyone to challenge, and ended up practicing alone gaining 3 exp for their weapon.";
+            return this.username+" didn't manage to find anyone to challenge, and ended up practicing alone gaining 3 exp for their equipment.";
         }
         String ret=this.username+" challenged "+this.targetname+". ";
         String winner="";
