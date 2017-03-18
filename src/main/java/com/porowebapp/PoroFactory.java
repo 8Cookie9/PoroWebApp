@@ -59,6 +59,8 @@ public class PoroFactory {
                 return new Poro("Poro with a Teemo hat",6,6,6,6,6,6,6,"special");
             }else if(this.username.toLowerCase().equals("hime_riri")){
                 return new Poro("Tea addict Poro",10,10,10,10,10,10,10,"special");
+            }else if(this.username.toLowerCase().equals("riripumpkin")){
+                return new Poro("Tea addict Poro",10,10,10,10,10,10,10,"special");
             }else if(this.username.toLowerCase().equals("psychoshizu")){
                 return new Poro("Psycho Poro",r.nextInt(11),r.nextInt(11),r.nextInt(11),3,3,8,5,"special");
             }
