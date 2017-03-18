@@ -28,14 +28,14 @@ public class Battle {
         int i1=r1.nextInt(5);
         int i2=r1.nextInt(5);
         if(this.username.equals(this.targetname)){
-            return new String[]{"practice","false"};
+            return new String[]{this.username,"practice"};
         }
         if(this.userLv+i1>this.targetLv+i2){
-            res[0]=this.username+" "+this.targetname+" win";
+            res[0]=this.username+" battle "+this.targetname+" win";
         }else if(this.userLv+i1>this.targetLv+i2){
-            res[0]=this.username+" "+this.targetname+" tie";
+            res[0]=this.username+" battle "+this.targetname+" tie";
         }else{
-            res[0]=this.username+" "+this.targetname+" lose";
+            res[0]=this.username+" battle "+this.targetname+" lose";
         }
         if(this.randSeedSteal==99&&this.userLv+i1>this.targetLv+i2){
             res[1]="true";
@@ -48,7 +48,7 @@ public class Battle {
     
     public String command(){
         String[] res=this.battle();
-        return "battle "+res[0]+" "+res[1];
+        return res[0]+" "+res[1];
     }
     
     public String text(){
