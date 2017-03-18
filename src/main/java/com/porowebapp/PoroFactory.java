@@ -78,15 +78,15 @@ public class PoroFactory {
     
     public String getRarity(int i){
         if(i==1){
-            return "very common";
-        }else if(i==2){
             return "common";
-        }else if(i==3){
+        }else if(i==2){
             return "uncommon";
-        }else if(i==4){
+        }else if(i==3){
             return "rare";
-        }else if(i==5){
+        }else if(i==4){
             return "ultra rare";
+        }else if(i==5){
+            return "secret rare";
         }else{
             return "";
         }

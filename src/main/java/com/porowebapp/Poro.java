@@ -7,7 +7,7 @@ public class Poro extends Level{
     public Poro(String type, int hp, int atk, int def, int hpmod, int defmod, int atkmod, int levelgain, String rarity){
         super(hp,def,atk,hpmod,defmod,atkmod,levelgain);
         this.type=type;
-        this.command=this.type+";"+super.getHpIV()+";"+super.getAttackIV()+";"+super.getDefenseIV()+";"+super.getHpModifier()+";"+super.getAttackModifier()+";"+super.getDefenseModifier()+";"+levelgain;
+        this.command=":"+this.type+":;"+super.getHpIV()+";"+super.getAttackIV()+";"+super.getDefenseIV()+";"+super.getHpModifier()+";"+super.getAttackModifier()+";"+super.getDefenseModifier()+";"+levelgain;
         this.text=" has received "+this.type+" ("+rarity+").";
     }
     

@@ -69,26 +69,26 @@ public class Battle {
             loser=this.username;
         }
         if(Integer.parseInt(res[2])>10){
-            ret+="From the very beginning one could see that "+loser+" was not even close to being "+winner+"'s match and the, and thus the result was unsurprisingly "+loser+"'s loss. ";
-            ret+=winner+" gained 5 experience points for their weapon. ";
+            ret+="From the very beginning one could see that "+loser+" was not even close to being "+winner+"'s match and the, and thus the result was, unsurprisingly, "+loser+"'s loss. ";
+            ret+=winner+" gained 5 experience points.";
         }else if(Integer.parseInt(res[2])>4){
             ret+="After a short time, it became obvious that it was going to be an uphill battle for "+loser+". In the end, "+loser+"'s valiant efforts were for naught, and "+winner+" ended up getting a relatively easy win. ";
-            ret+=winner+" gained 5 experience points for their weapon. ";
+            ret+=winner+" gained 5 experience points.";
         }else if(Integer.parseInt(res[2])>0){
             ret+="The participants were nearly equally matched, but in the end, "+winner+" managed to gain the upper hand and grab the victory. ";
-            ret+=winner+" gained 5 experience points for their weapon. ";
+            ret+=winner+" gained 5 experience points.";
         }else if(Integer.parseInt(res[2])<-10){
-            ret+="From the very beginning one could see that "+loser+" was not even close to being "+winner+"'s match and the, and thus the result was unsurprisingly "+loser+"'s loss. ";
+            ret+="From the very beginning one could see that "+loser+" was not even close to being "+winner+"'s match and the, and thus the result was, unsurprisingly, "+loser+"'s loss. ";
             if(new Random().nextInt(3)==0){
-                ret+="While walking away, "+loser+"could faintly hear "+winner+" mutter: 'what a scrub'. ";
+                ret+="While walking away, "+loser+" could faintly hear "+winner+" mutter: 'what a potato'. ";
             }
-            ret+=winner+" gained 3 experience points for their weapon. ";
+            ret+=winner+" gained 3 experience points.";
         }else if(Integer.parseInt(res[2])<-4){
             ret+="After a short time, it became obvious that it was going to be an uphill battle for "+loser+". In the end, "+loser+"'s valiant efforts were for naught, and "+winner+" ended up getting a relatively easy win. ";
-            ret+=winner+" gained 3 experience points for their weapon. ";
+            ret+=winner+" gained 3 experience points.";
         }else{
-            ret+="The participants were nearly equally matched, but in the end, "+winner+" managed to gain the upper hand and grab the victory. ";
-            ret+=winner+" gained 3 experience points for their weapon. ";
+            ret+="The participants were nearly equal in every aspect, but in the end, "+winner+" managed to gain the upper hand and grab the victory. ";
+            ret+=winner+" gained 3 experience points.";
         }
         if(res[1].equals("true")){
             ret+=" "+this.username+" managed to steal one miscallaneous item from "+this.targetname;
