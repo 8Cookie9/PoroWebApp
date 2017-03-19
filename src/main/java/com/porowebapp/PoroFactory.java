@@ -41,7 +41,7 @@ public class PoroFactory {
             return 4;
         }else if(r<=1000){
             return 3;
-        }else if(r<=5000){
+        }else if(r<=4000){
             return 2;
         }else{
             return 1;
@@ -54,9 +54,9 @@ public class PoroFactory {
             if(this.username.toLowerCase().equals("racetogold")){
                 return new Poro("Golden Poro",9,9,9,9,9,9,9,"special");
             }else if(this.username.toLowerCase().equals("sebbibastian")){
-                return new Poro("Crocoro",8,8,8,5,9,9,9,"special");
+                return new Poro("Crocoro",8,8,8,5,9,9,9,"bald");
             }else if(this.username.toLowerCase().equals("c0ok13")){
-                return new Poro("Poro with a Teemo hat",6,6,6,6,6,6,6,"special");
+                return new Poro("Poro with a Teemo hat",6,6,6,6,6,6,6,"toxic");
             }else if(this.username.toLowerCase().equals("hime_riri")){
                 return new Poro("Tea addict Poro",10,10,10,10,10,10,10,"special");
             }else if(this.username.toLowerCase().equals("riripumpkin")){
