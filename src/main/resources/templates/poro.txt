@@ -13,4 +13,4 @@ Battlecast Poro;3;5;2;3;4
 Wizard Poro;3;3;2;6;1
 Dark Star Poro;4;6;3;6;3
 Start Guardian Poro;4;6;4;4;4
-Poro King;5;10;5;5;5
+Royal Poro;5;10;5;5;5
