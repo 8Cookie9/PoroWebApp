@@ -1,110 +1,110 @@
-1;ancient dragon’s scale
-1;ancient orb
-1;angelic butterfly
-1;angelic mirror
-1;backpack
-1;barrel
-1;basket
-1;bottles
-1;candle
-1;centurial nuts
-1;cherry blossom orb
-1;cherrybell
-1;crab
-1;cuddly sea turtle
-1;deep sea lordfish
-1;demonic grasshopper
-1;demonic mirror
-1;dino
-1;dragon skeleton
-1;dreamy rocking chair
-1;fairy
-1;fine feather
-1;frog figure
-1;golden goddess statue
-1;golden swordfish
-1;grasshopper
-1;heart rug
-1;lucky cactus
-1;magic eggs
-1;mountain mushroom
-1;mysterious artefact
-1;paddling pool
-1;picnic set
-1;pirate flag
-1;plushy cottage
-1;present boxes
-1;pumpkin scarecrow
-1;royal grasshopper
-1;santa doll
-1;scarecrow
-1;sleeping dragon
-1;smiley flower
-1;snowman
-1;sultan’s throne
-1;toy camel
-2;carrot bed
-2;choco bed
-2;cloud bed
-2;coconut bed
-2;forest bed
-2;nightmare bed
-2;royal bed
-2;comfy pillow
-2;fluffy pillow
-2;hard pillow
-3;alpaca plushy
-3;big bunny plushy
-3;fluffy bunny plushy
-3;small bunny plushy
-3;blushing plushy
-3;panda plushy
-3;Teemo plushy
-3;teddy bear
-2;forest chest
-2;pirate chest
-2;royal chest
-2;treasure chest
-1;sack of copper
-1;sack of gold
-1;sack of potatoes
-1;sack of silver
-1;sack of treasure
-1;angelic mug
-1;bunny mug
-1;carrot mug
-1;demonic mug
-1;evil mug
-1;golden mug
-1;lucky mug
-1;magic mug
-1;mysterious mug
-1;angelic mug
-1;bunny mug
-1;carrot mug
-1;demonic mug
-1;evil mug
-1;golden mug
-1;lucky mug
-1;magic mug
-1;mysterious mug
-3;flower buttons
-3;pumpkin buttons
-3;bat cape
-3;dragon king’s cape
-3;sacred cape
-3;sea lord’s cape
-3;spirit king’s cape
-3;cute ribbon
-3;divine ribbon
-3;fancy ribbon
-3;fluffy ribbon
-3;happiness ribbon
-3;angelic wings
-3;choco wings
-3;evil wings
-3;gold dragon wings
-3;magic wings
-3;valkyrie wings
-3;angler’s goggles
-3;classy monocle
+1-ancient dragon’s scale
+1-ancient orb
+1-angelic butterfly
+1-angelic mirror
+1-backpack
+1-barrel
+1-basket
+1-bottles
+1-candle
+1-centurial nuts
+1-cherry blossom orb
+1-cherrybell
+1-crab
+1-cuddly sea turtle
+1-deep sea lordfish
+1-demonic grasshopper
+1-demonic mirror
+1-dino
+1-dragon skeleton
+1-dreamy rocking chair
+1-fairy
+1-fine feather
+1-frog figure
+1-golden goddess statue
+1-golden swordfish
+1-grasshopper
+1-heart rug
+1-lucky cactus
+1-magic eggs
+1-mountain mushroom
+1-mysterious artefact
+1-paddling pool
+1-picnic set
+1-pirate flag
+1-plushy cottage
+1-present boxes
+1-pumpkin scarecrow
+1-royal grasshopper
+1-santa doll
+1-scarecrow
+1-sleeping dragon
+1-smiley flower
+1-snowman
+1-sultan’s throne
+1-toy camel
+2-carrot bed
+2-choco bed
+2-cloud bed
+2-coconut bed
+2-forest bed
+2-nightmare bed
+2-royal bed
+2-comfy pillow
+2-fluffy pillow
+2-hard pillow
+3-alpaca plushy
+3-big bunny plushy
+3-fluffy bunny plushy
+3-small bunny plushy
+3-blushing plushy
+3-panda plushy
+3-Teemo plushy
+3-teddy bear
+2-forest chest
+2-pirate chest
+2-royal chest
+2-treasure chest
+1-sack of copper
+1-sack of gold
+1-sack of potatoes
+1-sack of silver
+1-sack of treasure
+1-angelic mug
+1-bunny mug
+1-carrot mug
+1-demonic mug
+1-evil mug
+1-golden mug
+1-lucky mug
+1-magic mug
+1-mysterious mug
+1-angelic mug
+1-bunny mug
+1-carrot mug
+1-demonic mug
+1-evil mug
+1-golden mug
+1-lucky mug
+1-magic mug
+1-mysterious mug
+3-flower buttons
+3-pumpkin buttons
+3-bat cape
+3-dragon king’s cape
+3-sacred cape
+3-sea lord’s cape
+3-spirit king’s cape
+3-cute ribbon
+3-divine ribbon
+3-fancy ribbon
+3-fluffy ribbon
+3-happiness ribbon
+3-angelic wings
+3-choco wings
+3-evil wings
+3-gold dragon wings
+3-magic wings
+3-valkyrie wings
+3-angler’s goggles
+3-classy monocle

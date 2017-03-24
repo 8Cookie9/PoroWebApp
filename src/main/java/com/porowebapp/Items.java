@@ -12,8 +12,8 @@ public class Items {
     }
     
     public void getMiscC(String m, int randseed){
-        String[] miscellaneous=m.split(";");
-                String result="misc "+miscellaneous[1];
+        String[] miscellaneous=m.split("-");
+        String result="misc "+miscellaneous[1];
         if(Integer.parseInt(miscellaneous[0])==1){
             result+=" "+1;
         }else if(Integer.parseInt(miscellaneous[0])==2){
@@ -28,8 +28,8 @@ public class Items {
     }
     
     public void getMiscT(String m, int randseed){
-        String[] miscellaneous=m.split(";");
-                String result=" received "+miscellaneous[1];
+        String[] miscellaneous=m.split("-");
+        String result=" received "+miscellaneous[1];
         if(Integer.parseInt(miscellaneous[0])==1){
             result+=" (+"+1+" hp).";
         }else if(Integer.parseInt(miscellaneous[0])==2){
@@ -44,8 +44,11 @@ public class Items {
     }
     
     public void getHeadgearC(String h, int randseed){
-        String[] miscellaneous=h.split(";");
-                String result="headgear "+miscellaneous[1];
+        String[] miscellaneous=h.split("-");
+        for(int i=0;i<miscellaneous.length;i++){
+            System.out.println(miscellaneous[i]);
+        }
+        String result="headgear "+miscellaneous[1];
         if(Integer.parseInt(miscellaneous[0])==1){
             result+=" "+1;
         }else if(Integer.parseInt(miscellaneous[0])==2){
@@ -59,8 +62,8 @@ public class Items {
     }
     
     public void getHeadgearT(String h, int randseed){
-        String[] miscellaneous=h.split(";");
-                String result=" received "+miscellaneous[1];
+        String[] miscellaneous=h.split("-");
+        String result=" received "+miscellaneous[1];
         if(Integer.parseInt(miscellaneous[0])==1){
             result+=" (+"+1+" defense).";
         }else if(Integer.parseInt(miscellaneous[0])==2){
@@ -71,7 +74,7 @@ public class Items {
         }else{
             result+=" (+"+(new Random(randseed).nextInt(2)+5)+" defense).";
         }
-        this.miscTxt=result;
+        this.headTxt=result;
     }
 
     public String getMiscCom() {
