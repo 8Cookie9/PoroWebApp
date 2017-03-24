@@ -1,4 +1,4 @@
-1-ancient dragon’s scale
+1-ancient dragon's scale
 1-ancient orb
 1-angelic butterfly
 1-angelic mirror
@@ -41,7 +41,7 @@
 1-sleeping dragon
 1-smiley flower
 1-snowman
-1-sultan’s throne
+1-sultan's throne
 1-toy camel
 2-carrot bed
 2-choco bed
@@ -91,10 +91,10 @@
 3-flower buttons
 3-pumpkin buttons
 3-bat cape
-3-dragon king’s cape
+3-dragon king's cape
 3-sacred cape
-3-sea lord’s cape
-3-spirit king’s cape
+3-sea lord's cape
+3-spirit king's cape
 3-cute ribbon
 3-divine ribbon
 3-fancy ribbon
@@ -106,5 +106,5 @@
 3-gold dragon wings
 3-magic wings
 3-valkyrie wings
-3-angler’s goggles
+3-angler's goggles
 3-classy monocle
