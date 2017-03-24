@@ -97,7 +97,8 @@ public class App {
             Items items=new Items();
             items.getMiscT(req.params(":misc"), Integer.parseInt(req.params(":seed")));
             data.put("text", items.getMiscTxt());
-
+            data.put("username", req.params(":username"));
+            
             return new ModelAndView(data, "headgearT");
         }, new ThymeleafTemplateEngine());
         
@@ -116,7 +117,8 @@ public class App {
             Items items=new Items();
             items.getHeadgearT(req.params(":misc"), Integer.parseInt(req.params(":seed")));
             data.put("text", items.getHeadTxt());
-
+            data.put("username", req.params(":username"));
+            
             return new ModelAndView(data, "headgearT");
         }, new ThymeleafTemplateEngine());
     }
