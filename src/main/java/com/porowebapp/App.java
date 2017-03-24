@@ -102,20 +102,60 @@ public class App {
             return new ModelAndView(data, "headgearT");
         }, new ThymeleafTemplateEngine());
         
-        Spark.get("/headgear/command/:username/:misc/:seed", (req, res) -> {
+        Spark.get("/headgear/command/:username/:head/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
-            items.getHeadgearC(req.params(":misc"), Integer.parseInt(req.params(":seed")));
+            items.getHeadgearC(req.params(":head"), Integer.parseInt(req.params(":seed")));
             data.put("command", items.getHeadCom());
             data.put("username", req.params(":username"));
 
             return new ModelAndView(data, "headgearC");
         }, new ThymeleafTemplateEngine());
         
-        Spark.get("/headgear/text/:username/:misc/:seed", (req, res) -> {
+        Spark.get("/headgear/text/:username/:head/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
-            items.getHeadgearT(req.params(":misc"), Integer.parseInt(req.params(":seed")));
+            items.getHeadgearT(req.params(":head"), Integer.parseInt(req.params(":seed")));
+            data.put("text", items.getHeadTxt());
+            data.put("username", req.params(":username"));
+            
+            return new ModelAndView(data, "headgearT");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/tea/command/:username/:tea/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            Items items=new Items();
+            items.getHeadgearC(req.params(":tea"), Integer.parseInt(req.params(":seed")));
+            data.put("command", items.getHeadCom());
+            data.put("username", req.params(":username"));
+
+            return new ModelAndView(data, "headgearC");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/tea/text/:username/:tea/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            Items items=new Items();
+            items.getHeadgearT(req.params(":tea"), Integer.parseInt(req.params(":seed")));
+            data.put("text", items.getHeadTxt());
+            data.put("username", req.params(":username"));
+            
+            return new ModelAndView(data, "headgearT");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/pastry/command/:username/:pastry/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            Items items=new Items();
+            items.getHeadgearC(req.params(":pastry"), Integer.parseInt(req.params(":seed")));
+            data.put("command", items.getHeadCom());
+            data.put("username", req.params(":username"));
+
+            return new ModelAndView(data, "headgearC");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/pastry/text/:username/:pastry/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            Items items=new Items();
+            items.getHeadgearT(req.params(":pastry"), Integer.parseInt(req.params(":seed")));
             data.put("text", items.getHeadTxt());
             data.put("username", req.params(":username"));
             
