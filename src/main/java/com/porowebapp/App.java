@@ -80,5 +80,46 @@ public class App {
 
             return new ModelAndView(data, "PoroCommand");
         }, new ThymeleafTemplateEngine());
+        
+        
+        Spark.get("/misc/command/:username/:misc/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            Items items=new Items();
+            items.getMiscC(req.params(":misc"), Integer.parseInt(req.params(":seed")));
+            data.put("command", items.getMiscCom());
+            data.put("username", req.params(":username"));
+
+            return new ModelAndView(data, "PoroCommand");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/misc/text/:username/:misc/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            Items items=new Items();
+            items.getMiscT(req.params(":misc"), Integer.parseInt(req.params(":seed")));
+            data.put("command", items.getMiscTxt());
+            data.put("username", req.params(":username"));
+
+            return new ModelAndView(data, "PoroCommand");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/headgear/command/:username/:misc/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            Items items=new Items();
+            items.getHeadgearC(req.params(":misc"), Integer.parseInt(req.params(":seed")));
+            data.put("command", items.getHeadCom());
+            data.put("username", req.params(":username"));
+
+            return new ModelAndView(data, "PoroCommand");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/headgear/text/:username/:misc/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            Items items=new Items();
+            items.getHeadgearT(req.params(":misc"), Integer.parseInt(req.params(":seed")));
+            data.put("command", items.getHeadTxt());
+            data.put("username", req.params(":username"));
+
+            return new ModelAndView(data, "PoroCommand");
+        }, new ThymeleafTemplateEngine());
     }
 }
