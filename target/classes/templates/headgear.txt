@@ -1,0 +1,117 @@
+2;alchemist's bandana
+2;brave bandana
+2;bright bandana
+2;chief's bandana
+3;blacksmith's beanie
+2;highland beret
+2;woodland beret
+3;cacto cabeza
+1;beastly cap
+1;blacksmith's cap
+1;creativity cap
+1;cup cap
+1;cutter's cap
+1;frilly cap
+1;leather cap
+1;savage cap
+1;shadow cap
+1;sheepish cap
+3;ares circlet
+3;crusader's circlet
+3;monarch crown
+3;princely crown
+3;flower hairclip
+3;goddess's hairpiece
+3;halo
+1;artisan's hat
+1;buccaneer's hat
+1;celestial hat
+1;danuta's hat
+1;egg hat
+1;eggplant hat
+1;festive hat
+1;five star hat
+1;gaudy hat
+1;grinning hat
+1;hunter's hat
+1;mystery hat
+1;netted hat
+1;philosopher's hat
+1;plushling hat
+1;prisoner's hat
+1;quilted hat
+1;sailor's hat
+1;shark hat
+1;sniper's hat
+1;snow hat
+1;witch's hat
+2;carrotella head
+2;dragon whelp head
+2;fluffkin head
+2;gold dragon head
+2;hammer head
+2;pumpkin head
+2;snowman's head
+2;buccaneer's headband
+2;elegant headband
+2;frilly headband
+2;ninja headband
+2;twisted headband
+2;desert headdress
+2;coastal headgear
+2;frigid headgear
+2:demon headpiece
+2;sky-high headwear
+2;cursed dragon helm
+2;dark sultan's helm
+2;dragon helm
+2;dragon king's helm
+2;gladiator's helm
+2;godly helm
+2;gold helm
+2;holy helm
+2;inferno helm
+2;iron helm
+2;lord's helm
+2;magic helm
+2;mermaid helm
+2;minerva's helm
+2;officer's helm
+2;pan-fried helm
+2;potluck helm
+2;rune helm
+2;sea lord's helm
+2;spirit king's helm
+2;shogun helm
+2;slugger's helm
+2;snakeskin helm
+2;spirit king's helm
+2;steel helm
+2;tidal helm
+2;tiger carp helm
+2;valkyrie helm
+2;avalanche helmet
+2;miner's helmet
+2;miner's puffy helmet
+2;plain helmet
+1;aqua hood
+1;bandit hood
+1;earth hood
+1;fishy green hood
+1;fishy pink hood
+1;flame hood
+1;grand magician's hood
+1;light hood
+1;mage's hood
+1;rainbow hood
+1;sacred hood
+1;umbral hood
+1;whale hood
+1;wind hood
+1;witch's hood
+3;diving mask
+3;crusader's tiara
+3;jade turban
+3;shellmet
+3;spikeband
+3;cancer's veil

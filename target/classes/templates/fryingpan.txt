@@ -1,0 +1,30 @@
+1;pretend frying pan
+2;bronze frying pan
+3;silver frying pan
+4;gold frying pan
+5;chocolaty frying pan
+6;chocolaty frying pan
+7;clam frying pan
+8;clam frying pan
+9;enchanted frying pan
+10;enchanted frying pan
+11;enchanted frying pan
+12;frymaster frying pan
+13;frymaster frying pan
+14;frymaster frying pan
+15;giant frying pan
+16;giant frying pan
+17;mithril frying pan
+18;mithril frying pan
+19;ancient frying pan
+20;dwarven frying pan
+21;pan de cuisine
+22;almost ultimate pan
+23;empyrean frying pan
+24;phoenix frying pan
+25;draconic frying pan
+26;royal frying pan
+27;chef poro’s pan
+28;pumpkin pan
+29;strawberry frying pan
+30;Riri’s pan
