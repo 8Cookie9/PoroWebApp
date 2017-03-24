@@ -89,17 +89,16 @@ public class App {
             data.put("command", items.getMiscCom());
             data.put("username", req.params(":username"));
 
-            return new ModelAndView(data, "PoroCommand");
+            return new ModelAndView(data, "headgearC");
         }, new ThymeleafTemplateEngine());
         
         Spark.get("/misc/text/:username/:misc/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
             items.getMiscT(req.params(":misc"), Integer.parseInt(req.params(":seed")));
-            data.put("command", items.getMiscTxt());
-            data.put("username", req.params(":username"));
+            data.put("text", items.getMiscTxt());
 
-            return new ModelAndView(data, "PoroCommand");
+            return new ModelAndView(data, "headgearT");
         }, new ThymeleafTemplateEngine());
         
         Spark.get("/headgear/command/:username/:misc/:seed", (req, res) -> {
@@ -109,17 +108,16 @@ public class App {
             data.put("command", items.getHeadCom());
             data.put("username", req.params(":username"));
 
-            return new ModelAndView(data, "PoroCommand");
+            return new ModelAndView(data, "headgearC");
         }, new ThymeleafTemplateEngine());
         
         Spark.get("/headgear/text/:username/:misc/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
             items.getHeadgearT(req.params(":misc"), Integer.parseInt(req.params(":seed")));
-            data.put("command", items.getHeadTxt());
-            data.put("username", req.params(":username"));
+            data.put("text", items.getHeadTxt());
 
-            return new ModelAndView(data, "PoroCommand");
+            return new ModelAndView(data, "headgearT");
         }, new ThymeleafTemplateEngine());
     }
 }
