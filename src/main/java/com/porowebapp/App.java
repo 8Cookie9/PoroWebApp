@@ -125,7 +125,7 @@ public class App {
         Spark.get("/tea/command/:username/:tea/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
-            items.getHeadgearC(req.params(":tea"), Integer.parseInt(req.params(":seed")));
+            items.teaC(req.params(":tea"), Integer.parseInt(req.params(":seed")));
             data.put("command", items.getCom());
             data.put("username", req.params(":username"));
 
@@ -135,7 +135,7 @@ public class App {
         Spark.get("/tea/text/:username/:tea/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
-            items.getHeadgearT(req.params(":tea"), Integer.parseInt(req.params(":seed")));
+            items.teaT(req.params(":tea"), Integer.parseInt(req.params(":seed")));
             data.put("text", items.getTxt());
             data.put("username", req.params(":username"));
             
@@ -145,7 +145,7 @@ public class App {
         Spark.get("/pastry/command/:username/:pastry/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
-            items.teaC(req.params(":pastry"), Integer.parseInt(req.params(":seed")));
+            items.pastryC(req.params(":pastry"), Integer.parseInt(req.params(":seed")));
             data.put("command", items.getCom());
             data.put("username", req.params(":username"));
 
@@ -155,7 +155,7 @@ public class App {
         Spark.get("/pastry/text/:username/:pastry/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
-            items.getHeadgearT(req.params(":pastry"), Integer.parseInt(req.params(":seed")));
+            items.pastryT(req.params(":pastry"), Integer.parseInt(req.params(":seed")));
             data.put("text", items.getTxt());
             data.put("username", req.params(":username"));
             
