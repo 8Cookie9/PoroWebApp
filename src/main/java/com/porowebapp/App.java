@@ -86,7 +86,7 @@ public class App {
             HashMap data = new HashMap<>();
             Items items=new Items();
             items.getMiscC(req.params(":misc"), Integer.parseInt(req.params(":seed")));
-            data.put("command", items.getMiscCom());
+            data.put("command", items.getCom());
             data.put("username", req.params(":username"));
 
             return new ModelAndView(data, "headgearC");
@@ -96,7 +96,7 @@ public class App {
             HashMap data = new HashMap<>();
             Items items=new Items();
             items.getMiscT(req.params(":misc"), Integer.parseInt(req.params(":seed")));
-            data.put("text", items.getMiscTxt());
+            data.put("text", items.getTxt());
             data.put("username", req.params(":username"));
             
             return new ModelAndView(data, "headgearT");
@@ -106,7 +106,7 @@ public class App {
             HashMap data = new HashMap<>();
             Items items=new Items();
             items.getHeadgearC(req.params(":head"), Integer.parseInt(req.params(":seed")));
-            data.put("command", items.getHeadCom());
+            data.put("command", items.getCom());
             data.put("username", req.params(":username"));
 
             return new ModelAndView(data, "headgearC");
@@ -116,7 +116,7 @@ public class App {
             HashMap data = new HashMap<>();
             Items items=new Items();
             items.getHeadgearT(req.params(":head"), Integer.parseInt(req.params(":seed")));
-            data.put("text", items.getHeadTxt());
+            data.put("text", items.getTxt());
             data.put("username", req.params(":username"));
             
             return new ModelAndView(data, "headgearT");
@@ -126,7 +126,7 @@ public class App {
             HashMap data = new HashMap<>();
             Items items=new Items();
             items.getHeadgearC(req.params(":tea"), Integer.parseInt(req.params(":seed")));
-            data.put("command", items.getHeadCom());
+            data.put("command", items.getCom());
             data.put("username", req.params(":username"));
 
             return new ModelAndView(data, "headgearC");
@@ -136,7 +136,7 @@ public class App {
             HashMap data = new HashMap<>();
             Items items=new Items();
             items.getHeadgearT(req.params(":tea"), Integer.parseInt(req.params(":seed")));
-            data.put("text", items.getHeadTxt());
+            data.put("text", items.getTxt());
             data.put("username", req.params(":username"));
             
             return new ModelAndView(data, "headgearT");
@@ -145,8 +145,8 @@ public class App {
         Spark.get("/pastry/command/:username/:pastry/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
-            items.getHeadgearC(req.params(":pastry"), Integer.parseInt(req.params(":seed")));
-            data.put("command", items.getHeadCom());
+            items.teaC(req.params(":pastry"), Integer.parseInt(req.params(":seed")));
+            data.put("command", items.getCom());
             data.put("username", req.params(":username"));
 
             return new ModelAndView(data, "headgearC");
@@ -156,7 +156,7 @@ public class App {
             HashMap data = new HashMap<>();
             Items items=new Items();
             items.getHeadgearT(req.params(":pastry"), Integer.parseInt(req.params(":seed")));
-            data.put("text", items.getHeadTxt());
+            data.put("text", items.getTxt());
             data.put("username", req.params(":username"));
             
             return new ModelAndView(data, "headgearT");

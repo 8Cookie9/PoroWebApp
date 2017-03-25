@@ -4,10 +4,8 @@ import java.util.Random;
 
 public class Items {
 
-    private String miscCom;
-    private String miscTxt;
-    private String headCom;
-    private String headTxt;
+    private String com;
+    private String txt;
 
     public Items() {
     }
@@ -24,7 +22,7 @@ public class Items {
         } else {
             result += " " + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 5);
         }
-        this.miscCom = result;
+        this.com = result;
     }
 
     public void getMiscT(String m, int randseed) {
@@ -40,7 +38,7 @@ public class Items {
         } else {
             result += " (+" + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 5) + " hp).";
         }
-        this.miscTxt = result;
+        this.txt = result;
     }
 
     public void getHeadgearC(String h, int randseed) {
@@ -58,7 +56,7 @@ public class Items {
         } else {
             result += " " + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 5);
         }
-        this.headCom = result;
+        this.com = result;
     }
 
     public void getHeadgearT(String h, int randseed) {
@@ -74,23 +72,15 @@ public class Items {
         } else {
             result += " (+" + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 5) + " defense).";
         }
-        this.headTxt = result;
+        this.txt = result;
     }
 
-    public String getMiscCom() {
-        return miscCom;
+    public String getCom() {
+        return com;
     }
 
-    public String getMiscTxt() {
-        return miscTxt;
-    }
-
-    public String getHeadCom() {
-        return headCom;
-    }
-
-    public String getHeadTxt() {
-        return headTxt;
+    public String getTxt() {
+        return txt;
     }
     
     public void teaC(String h, int randseed) {
@@ -108,10 +98,10 @@ public class Items {
         } else {
             result += " " + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 5);
         }
-        this.headCom = result;
+        this.com = result;
     }
     
-    public String teaT(String h, int randseed) {
+    public void teaT(String h, int randseed) {
         String[] miscellaneous = h.split("-");
         String result = "'s Poro received " + miscellaneous[1] + " and ";
         if (Integer.parseInt(miscellaneous[0]) == 1) {
@@ -124,7 +114,7 @@ public class Items {
         } else {
             result += "its friendship grew by " + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 5) + ".";
         }
-        return result;
+        this.txt = result;
     }
     
     public void pastryC(String h, int randseed) {
@@ -142,10 +132,10 @@ public class Items {
         } else {
             result += " " + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 8);
         }
-        this.headCom = result;
+        this.com = result;
     }
     
-    public String pastryT(String h, int randseed) {
+    public void pastryT(String h, int randseed) {
         String[] miscellaneous = h.split("-");
         String result = "'s Poro received " + miscellaneous[1] + " and ";
         if (Integer.parseInt(miscellaneous[0]) == 1) {
@@ -158,6 +148,6 @@ public class Items {
         } else {
             result += "its friendship grew by " + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 8) + ".";
         }
-        return result;
+        this.txt = result;
     }
 }
