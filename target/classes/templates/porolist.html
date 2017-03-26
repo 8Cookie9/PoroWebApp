@@ -10,10 +10,9 @@
         
         <table>
             <tr th:each="poros : ${porolist}">
-                <td th:each="poro : ${poros}">
-                    <a th:href="@{~/poro/{id}(id=${poro.id})}">
+                <td th:each="poro : ${poros}" style="border:1px solid;text-align:center;width:150px;height:150px;">
+                    <a th:href="@{~/poro/{id}(id=${poro.id})}" style="color:black;">
                     <img th:src="${poro.img}" height="32px" width="32px"/>
-                    <br />
                     <div th:text="${poro.type}">text</div>
                     </a>
                 </td>

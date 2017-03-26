@@ -174,14 +174,8 @@ public class App {
         
         Spark.get("/poro/:id", (req, res) -> {
             HashMap data = new HashMap<>();
-            PoroFactory p = new PoroFactory(0,"newporo","username");
-            
-            data.put("command", "newporo");
-            data.put("poro", p.getPoro());
-            data.put("username", "username");
 
-
-            return new ModelAndView(data, "PoroText");
+            return new ModelAndView(data, "poro");
         }, new ThymeleafTemplateEngine());
     }
 }
