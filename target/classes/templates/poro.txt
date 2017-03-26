@@ -1,16 +1,16 @@
-Regular Poro;1;2;2;2;2;src/main/resources/templates/Poros/porobase.png;0
-Poro Artist;1;1;1;3;1;src/main/resources/templates/Poros/porobase.png;1
-Salty Poro;1;5;2;2;2;src/main/resources/templates/Poros/saltyporo.png;2
-Poro Cosplayer;1;1;1;1;3;src/main/resources/templates/Poros/porobase.png;3
-Pool Party Poro;1;1;3;1;1;src/main/resources/templates/Poros/poolpartyporo.png;4
-Gentleman Poro;2;1;2;2;2;src/main/resources/templates/Poros/porobase.png;5
-Red-Nosed Poro;2;2;3;2;1;src/main/resources/templates/Poros/porobase.png;6
-Astronaut Poro;2;3;2;1;4;src/main/resources/templates/Poros/porobase.png;7
-Shadow Isles Poro;2;2;3;2;2;src/main/resources/templates/Poros/porobase.png;8
-Dragonslayer Poro;3;6;4;3;4;src/main/resources/templates/Poros/porobase.png;9
-PROJECT: Poro;3;5;2;4;3;src/main/resources/templates/Poros/porobase.png;10
-Battlecast Poro;3;5;2;3;4;src/main/resources/templates/Poros/porobase.png;11
-Wizard Poro;3;3;2;6;1;src/main/resources/templates/Poros/porobase.png;12
-Dark Star Poro;4;6;3;6;3;src/main/resources/templates/Poros/porobase.png;13
-Start Guardian Poro;4;6;4;4;4;src/main/resources/templates/Poros/porobase.png;14
-Royal Poro;5;10;5;5;5;src/main/resources/templates/Poros/roalporo.png;15
+Regular Poro;1;2;2;2;2;porobase.png;0
+Poro Artist;1;1;1;3;1;porobase.png;1
+Salty Poro;1;5;2;2;2;saltyporo.png;2
+Poro Cosplayer;1;1;1;1;3;porobase.png;3
+Pool Party Poro;1;1;3;1;1;poolpartyporo.png;4
+Gentleman Poro;2;1;2;2;2;porobase.png;5
+Red-Nosed Poro;2;2;3;2;1;porobase.png;6
+Astronaut Poro;2;3;2;1;4;porobase.png;7
+Shadow Isles Poro;2;2;3;2;2;porobase.png;8
+Dragonslayer Poro;3;6;4;3;4;porobase.png;9
+PROJECT: Poro;3;5;2;4;3;porobase.png;10
+Battlecast Poro;3;5;2;3;4;porobase.png;11
+Wizard Poro;3;3;2;6;1;porobase.png;12
+Dark Star Poro;4;6;3;6;3;porobase.png;13
+Start Guardian Poro;4;6;4;4;4;porobase.png;14
+Royal Poro;5;10;5;5;5;royalporo.png;15
