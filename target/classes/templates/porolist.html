@@ -1,0 +1,23 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>Porodex</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+
+    <body>
+        
+        <table>
+            <tr th:each="poros : ${porolist}">
+                <td th:each="poro : ${poros}">
+                    <a href="/poro/${poro.id}">
+                    <img src="${poro.img}" height="32px" width="32px"/>
+                    <br />
+                    <div th:text="${poro.type}">text</div>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

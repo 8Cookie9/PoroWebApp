@@ -161,5 +161,27 @@ public class App {
             
             return new ModelAndView(data, "headgearT");
         }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/porolist", (req, res) -> {
+            HashMap data = new HashMap<>();
+            PoroFactory p = new PoroFactory(0,"porolist","username");
+            
+            data.put("porolist", p.poroTable());
+
+
+            return new ModelAndView(data, "porolist");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/poro/:id", (req, res) -> {
+            HashMap data = new HashMap<>();
+            PoroFactory p = new PoroFactory(0,"newporo","username");
+            
+            data.put("command", "newporo");
+            data.put("poro", p.getPoro());
+            data.put("username", "username");
+
+
+            return new ModelAndView(data, "PoroText");
+        }, new ThymeleafTemplateEngine());
     }
 }
