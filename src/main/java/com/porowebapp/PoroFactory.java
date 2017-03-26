@@ -109,10 +109,10 @@ public class PoroFactory {
         for(int x=0;x<size;x++){
             List<Poro> list=new ArrayList<>();
             for(int y=0;y<size;y++){
-                if(((x*y)+y)>=porolist.size()){
+                if(((x*size)+y)>=porolist.size()){
                     break;
                 }
-                list.add(porolist.get((x*y)+y));
+                list.add(porolist.get((x*size)+y));
             }
             porotable.add(list);
         }

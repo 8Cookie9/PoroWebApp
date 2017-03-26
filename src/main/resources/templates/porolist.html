@@ -11,8 +11,8 @@
         <table>
             <tr th:each="poros : ${porolist}">
                 <td th:each="poro : ${poros}">
-                    <a href="/poro/${poro.id}">
-                    <img src="${poro.img}" height="32px" width="32px"/>
+                    <a th:href="@{~/poro/{id}(id=${poro.id})}">
+                    <img th:src="${poro.img}" height="32px" width="32px"/>
                     <br />
                     <div th:text="${poro.type}">text</div>
                     </a>
