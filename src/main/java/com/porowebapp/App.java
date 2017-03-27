@@ -1,6 +1,7 @@
 package com.porowebapp;
 
 import java.util.HashMap;
+import java.util.List;
 import spark.ModelAndView;
 import spark.Spark;
 import static spark.Spark.*;
@@ -174,7 +175,23 @@ public class App {
         
         Spark.get("/poro/:id", (req, res) -> {
             HashMap data = new HashMap<>();
-
+            PoroFactory p = new PoroFactory(0,"porolist","username");
+            List<Poro> list=p.getAllPoros();
+            Poro poro=p.getPoro();
+            int id=999;
+            try{
+                id=Integer.parseInt(req.params(":id"));
+            }catch(Exception e){}
+            for(Poro po:list){
+                if(po.getId()==id){
+                    poro=po;
+                    break;
+                }
+            }
+            data.put("poro", poro);
+            data.put("hp", poro.getHpModifier());
+            data.put("atk", poro.getAttackModifier());
+            data.put("def", poro.getDefenseModifier());
             return new ModelAndView(data, "poro");
         }, new ThymeleafTemplateEngine());
     }

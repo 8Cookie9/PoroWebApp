@@ -6,6 +6,7 @@ public class Poro extends Level{
     private String text;
     private String img;
     private int id;
+    private String rarity;
     public Poro(String type, int hp, int atk, int def, int hpmod, int defmod, int atkmod, int levelgain, String rarity, String img, int id){
         super(hp,def,atk,hpmod,defmod,atkmod,levelgain);
         this.type=type;
@@ -13,22 +14,27 @@ public class Poro extends Level{
         this.text=" has received "+this.type+" ("+rarity+").";
         this.img=img;
         this.id=id;
+        this.rarity=rarity;
     }
-
+    
+    public String getRarity(){
+        return this.rarity;
+    }
+    
     public String getImg() {
-        return img;
+        return this.img;
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
     
     public String getType(){
         return this.type;
     }
     
-    public void gainExp(int exp){        super.addExp(exp);
-
+    public void gainExp(int exp){
+        super.addExp(exp);
     }
     
     public String getCommand(){

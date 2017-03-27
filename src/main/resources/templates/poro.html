@@ -3,10 +3,67 @@
 
     <head>
         <title>Porodex</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta charset="UTF-8" />
     </head>
-
     <body>
+       
+        <table style="border:1px solid;margin:5px;padding:10px;">
+            <tr>
+                <th colspan="2" style="border-bottom: 1px solid;padding: 5px;">
+                    <img th:src="${poro.img}" height="32px" width="32px"/>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <b>
+                    Name:
+                    </b>
+                </td>
+                <td th:text="${poro.type}">
+                    name
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>
+                    Rarity:
+                    </b>
+                </td>
+                <td th:text="${poro.rarity}">
+                    rarity
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>
+                    HP growth:
+                    </b>
+                </td>
+                <td th:text="${hp}">
+                    HP growth
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>
+                    Attack growth:
+                    </b>
+                </td>
+                <td th:text="${atk}">
+                    attack growth
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>
+                    Defense growth:
+                    </b>
+                </td>
+                <td th:text="${def}">
+                    defense growth
+                </td>
+            </tr>
+        </table>
         
     </body>
 </html>

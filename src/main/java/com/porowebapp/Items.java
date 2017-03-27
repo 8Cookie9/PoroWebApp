@@ -118,7 +118,7 @@ public class Items {
     }
     
     public void pastryC(String h, int randseed) {
-        String[] tea = h.split("-");
+        String[] tea = h.split("_");
         for (int i = 0; i < tea.length; i++) {
             System.out.println(tea[i]);
         }
@@ -136,7 +136,7 @@ public class Items {
     }
     
     public void pastryT(String h, int randseed) {
-        String[] miscellaneous = h.split("-");
+        String[] miscellaneous = h.split("_");
         String result = "'s Poro received " + miscellaneous[1] + " and ";
         if (Integer.parseInt(miscellaneous[0]) == 1) {
             result += "its friendship grew by " + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 2) + ".";

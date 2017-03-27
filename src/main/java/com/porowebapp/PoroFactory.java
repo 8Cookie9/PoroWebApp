@@ -97,7 +97,7 @@ public class PoroFactory {
         GetData get = new GetData(this.filepath);
         for(String args:get.data()){
             String[] poroInfo=args.split(";");
-            porolist.add(new Poro(poroInfo[0],0,0,0,Integer.parseInt(poroInfo[3]),Integer.parseInt(poroInfo[4]),Integer.parseInt(poroInfo[5]),Integer.parseInt(poroInfo[2]),poroInfo[1],poroInfo[6],Integer.parseInt(poroInfo[7])));
+            porolist.add(new Poro(poroInfo[0],0,0,0,Integer.parseInt(poroInfo[3]),Integer.parseInt(poroInfo[4]),Integer.parseInt(poroInfo[5]),Integer.parseInt(poroInfo[2]),getRarity(Integer.parseInt(poroInfo[1])),poroInfo[6],Integer.parseInt(poroInfo[7])));
         }
         return porolist;
     }
