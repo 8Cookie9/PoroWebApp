@@ -7,6 +7,7 @@ public class Poro extends Level{
     private String img;
     private int id;
     private String rarity;
+    private double lv;
     public Poro(String type, int hp, int atk, int def, int hpmod, int defmod, int atkmod, int levelgain, String rarity, String img, int id){
         super(hp,def,atk,hpmod,defmod,atkmod,levelgain);
         this.type=type;
@@ -15,10 +16,19 @@ public class Poro extends Level{
         this.img=img;
         this.id=id;
         this.rarity=rarity;
+        this.setLv();
     }
     
     public String getRarity(){
         return this.rarity;
+    }
+    
+    private void setLv(){
+        this.lv=Math.floor((1.0/(double)super.getLevelGain())*100)/10;
+    }
+    
+    public double getLv(){
+        return this.lv;
     }
     
     public String getImg() {
