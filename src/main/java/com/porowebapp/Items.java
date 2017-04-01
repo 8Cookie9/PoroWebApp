@@ -88,7 +88,7 @@ public class Items {
         for (int i = 0; i < tea.length; i++) {
             System.out.println(tea[i]);
         }
-        String result = "tea " + tea[1];
+        String result = "addexp";
         if (Integer.parseInt(tea[0]) == 1) {
             result += " " + 1;
         } else if (Integer.parseInt(tea[0]) == 2) {
@@ -122,7 +122,7 @@ public class Items {
         for (int i = 0; i < tea.length; i++) {
             System.out.println(tea[i]);
         }
-        String result = "tea " + tea[1];
+        String result = "addexp";
         if (Integer.parseInt(tea[0]) == 1) {
             result += " " + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 2);
         } else if (Integer.parseInt(tea[0]) == 2) {
