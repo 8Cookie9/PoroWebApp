@@ -161,7 +161,7 @@ public class Items {
     
     public String pastry(String h, int randseed){
         //return "$savetofile(\"C:\\Users\\Jaakko\\AppData\\Roaming\\AnkhHeart\\AnkhBotR2\\Twitch\\Files\\commands.txt\",\""+this.pastryC(h, randseed)+"\",\"$user"+this.pastryT(h, randseed)+"\",\"\")";
-        return "$removepoints(\"$user\",\"100\",\"100\",\"$savetofile(\"C:\\Users\\Jaakko\\AppData\\Roaming\\AnkhHeart\\AnkhBotR2\\Twitch\\Files\\commands.txt\",\"success\",\"fail\",\"false\")";
+        return "$removepoints(\"$user\",\"100\",\"100\",\"success\",\"fail\",\"false\")";
     }
     
     public String tea(String h, int randseed){
