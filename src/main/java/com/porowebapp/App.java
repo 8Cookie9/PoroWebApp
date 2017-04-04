@@ -20,6 +20,38 @@ public class App {
             return new ModelAndView(data, "index");
         }, new ThymeleafTemplateEngine());
         
+        Spark.get("/pastry/:h/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            Items items=new Items();
+            data.put("command", items.pastry(req.params(":h"), Integer.parseInt(req.params(":seed"))));
+
+            return new ModelAndView(data, "com");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/tea/:h/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            Items items=new Items();
+            data.put("command", items.tea(req.params(":h"), Integer.parseInt(req.params(":seed"))));
+
+            return new ModelAndView(data, "com");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/headgear/:h/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            Items items=new Items();
+            data.put("command", items.headgear(req.params(":h"), Integer.parseInt(req.params(":seed"))));
+
+            return new ModelAndView(data, "com");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/misc/:h/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            Items items=new Items();
+            data.put("command", items.misc(req.params(":h"), Integer.parseInt(req.params(":seed"))));
+
+            return new ModelAndView(data, "com");
+        }, new ThymeleafTemplateEngine());
+        
         Spark.get("/battle/command/:username/:targetname/:userlv/:targetlv/:randseedduel/:randseedsteal", (req, res) -> {
             HashMap data = new HashMap<>();
             Battle battle=new Battle(req.params(":username"),req.params(":targetname"),Integer.parseInt(req.params(":userlv")),Integer.parseInt(req.params(":targetlv")),Integer.parseInt(req.params(":randseedduel")),Integer.parseInt(req.params(":randseedsteal")));
@@ -195,36 +227,5 @@ public class App {
             return new ModelAndView(data, "poro");
         }, new ThymeleafTemplateEngine());
         
-        Spark.get("/pastry/:h/:seed", (req, res) -> {
-            HashMap data = new HashMap<>();
-            Items items=new Items();
-            data.put("command", items.pastry(req.params(":h"), Integer.parseInt(req.params(":seed"))));
-
-            return new ModelAndView(data, "com");
-        }, new ThymeleafTemplateEngine());
-        
-        Spark.get("/tea/:h/:seed", (req, res) -> {
-            HashMap data = new HashMap<>();
-            Items items=new Items();
-            data.put("command", items.tea(req.params(":h"), Integer.parseInt(req.params(":seed"))));
-
-            return new ModelAndView(data, "com");
-        }, new ThymeleafTemplateEngine());
-        
-        Spark.get("/headgear/:h/:seed", (req, res) -> {
-            HashMap data = new HashMap<>();
-            Items items=new Items();
-            data.put("command", items.headgear(req.params(":h"), Integer.parseInt(req.params(":seed"))));
-
-            return new ModelAndView(data, "com");
-        }, new ThymeleafTemplateEngine());
-        
-        Spark.get("/misc/:h/:seed", (req, res) -> {
-            HashMap data = new HashMap<>();
-            Items items=new Items();
-            data.put("command", items.misc(req.params(":h"), Integer.parseInt(req.params(":seed"))));
-
-            return new ModelAndView(data, "com");
-        }, new ThymeleafTemplateEngine());
     }
 }
