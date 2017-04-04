@@ -160,18 +160,18 @@ public class Items {
     }
     
     public String pastry(String h, int randseed){
-        return "$savetofile(\"C:\\Users\\Pumpkin\\Documents\\Streamstuff\\Poro\\commands.txt\",\"$readapi("+this.pastryC(h, randseed)+"))\",\"$readapi("+this.pastryT(h, randseed)+")\",\"\")";
+        return "$savetofile(\"C:\\Users\\Pumpkin\\Documents\\Streamstuff\\Poro\\commands.txt\",\""+this.pastryC(h, randseed)+"\",\"$user"+this.pastryT(h, randseed)+"\",\"\")";
     }
     
     public String tea(String h, int randseed){
-        return "$savetofile(\"C:\\Users\\Pumpkin\\Documents\\Streamstuff\\Poro\\commands.txt\",\"$readapi("+this.teaC(h, randseed)+"))\",\"$readapi("+this.teaT(h, randseed)+")\",\"\")";
+        return "$savetofile(\"C:\\Users\\Pumpkin\\Documents\\Streamstuff\\Poro\\commands.txt\",\"$user "+this.teaC(h, randseed)+"\",\"$user"+this.teaT(h, randseed)+"\",\"\")";
     }
     
     public String headgear(String h, int randseed){
-        return "$savetofile(\"C:\\Users\\Pumpkin\\Documents\\Streamstuff\\Poro\\commands.txt\",\"$readapi("+this.getHeadgearC(h, randseed)+"))\",\"$readapi("+this.getHeadgearT(h, randseed)+")\",\"\")";
+        return "$savetofile(\"C:\\Users\\Pumpkin\\Documents\\Streamstuff\\Poro\\commands.txt\",\"$user "+this.getHeadgearC(h, randseed)+"\",\"$user"+this.getHeadgearT(h, randseed)+"\",\"\")";
     }
     
     public String misc(String h, int randseed){
-        return "$savetofile(\"C:\\Users\\Pumpkin\\Documents\\Streamstuff\\Poro\\commands.txt\",\"$readapi("+this.getMiscC(h, randseed)+"))\",\"$readapi("+this.getMiscT(h, randseed)+")\",\"\")";
+        return "$savetofile(\"C:\\Users\\Pumpkin\\Documents\\Streamstuff\\Poro\\commands.txt\",\"$user "+this.getMiscC(h, randseed)+"\",\"$user"+this.getMiscT(h, randseed)+"\",\"\")";
     }
 }
