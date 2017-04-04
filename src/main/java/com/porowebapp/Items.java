@@ -160,7 +160,7 @@ public class Items {
     }
     
     public String pastry(String h, int randseed){
-        return "$savetofile(\"C:\\Users\\Jaakko\\AppData\\Roaming\\AnkhHeart\\AnkhBotR2\\Twitch\\Files\\commands.txt\",\""+this.pastryC(h, randseed)+"\",\"$user"+this.pastryT(h, randseed)+"\",\"\")";
+        return "$savetofile(\"C:\\Users\\Jaakko\\AppData\\Roaming\\AnkhHeart\\AnkhBotR2\\Twitch\\Files\\commands.txt\",\""+this.pastryC(h, randseed)+"\")";
     }
     
     public String tea(String h, int randseed){
