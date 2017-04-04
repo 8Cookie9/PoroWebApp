@@ -10,7 +10,7 @@ public class Items {
     public Items() {
     }
 
-    public void getMiscC(String m, int randseed) {
+    public String getMiscC(String m, int randseed) {
         String[] miscellaneous = m.split("-");
         String result = "misc " + miscellaneous[1];
         if (Integer.parseInt(miscellaneous[0]) == 1) {
@@ -23,9 +23,10 @@ public class Items {
             result += " " + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 5);
         }
         this.com = result;
+        return result;
     }
 
-    public void getMiscT(String m, int randseed) {
+    public String getMiscT(String m, int randseed) {
         String[] miscellaneous = m.split("-");
         String result = " received " + miscellaneous[1];
         if (Integer.parseInt(miscellaneous[0]) == 1) {
@@ -39,9 +40,10 @@ public class Items {
             result += " (+" + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 5) + " hp).";
         }
         this.txt = result;
+        return result;
     }
 
-    public void getHeadgearC(String h, int randseed) {
+    public String getHeadgearC(String h, int randseed) {
         String[] miscellaneous = h.split("-");
         for (int i = 0; i < miscellaneous.length; i++) {
             System.out.println(miscellaneous[i]);
@@ -57,9 +59,10 @@ public class Items {
             result += " " + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 5);
         }
         this.com = result;
+        return result;
     }
 
-    public void getHeadgearT(String h, int randseed) {
+    public String getHeadgearT(String h, int randseed) {
         String[] miscellaneous = h.split("-");
         String result = " received " + miscellaneous[1];
         if (Integer.parseInt(miscellaneous[0]) == 1) {
@@ -73,6 +76,7 @@ public class Items {
             result += " (+" + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 5) + " defense).";
         }
         this.txt = result;
+        return result;
     }
 
     public String getCom() {
@@ -83,7 +87,7 @@ public class Items {
         return txt;
     }
     
-    public void teaC(String h, int randseed) {
+    public String teaC(String h, int randseed) {
         String[] tea = h.split("-");
         for (int i = 0; i < tea.length; i++) {
             System.out.println(tea[i]);
@@ -99,9 +103,10 @@ public class Items {
             result += " " + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 5);
         }
         this.com = result;
+        return result;
     }
     
-    public void teaT(String h, int randseed) {
+    public String teaT(String h, int randseed) {
         String[] miscellaneous = h.split("-");
         String result = "'s Poro received " + miscellaneous[1] + " and ";
         if (Integer.parseInt(miscellaneous[0]) == 1) {
@@ -115,9 +120,10 @@ public class Items {
             result += "its friendship grew by " + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 5) + ".";
         }
         this.txt = result;
+        return result;
     }
     
-    public void pastryC(String h, int randseed) {
+    public String pastryC(String h, int randseed) {
         String[] tea = h.split("_");
         for (int i = 0; i < tea.length; i++) {
             System.out.println(tea[i]);
@@ -133,9 +139,10 @@ public class Items {
             result += " " + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 8);
         }
         this.com = result;
+        return result;
     }
     
-    public void pastryT(String h, int randseed) {
+    public String pastryT(String h, int randseed) {
         String[] miscellaneous = h.split("_");
         String result = "'s Poro received " + miscellaneous[1] + " and ";
         if (Integer.parseInt(miscellaneous[0]) == 1) {
@@ -149,5 +156,22 @@ public class Items {
             result += "its friendship grew by " + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 8) + ".";
         }
         this.txt = result;
+        return result;
+    }
+    
+    public String pastry(String h, int randseed){
+        return "$savetofile(\"C:\\Users\\Pumpkin\\Documents\\Streamstuff\\Poro\\commands.txt\",\"$readapi("+this.pastryC(h, randseed)+"))\",\"$readapi("+this.pastryT(h, randseed)+")\",\"\")";
+    }
+    
+    public String tea(String h, int randseed){
+        return "$savetofile(\"C:\\Users\\Pumpkin\\Documents\\Streamstuff\\Poro\\commands.txt\",\"$readapi("+this.teaC(h, randseed)+"))\",\"$readapi("+this.teaT(h, randseed)+")\",\"\")";
+    }
+    
+    public String headgear(String h, int randseed){
+        return "$savetofile(\"C:\\Users\\Pumpkin\\Documents\\Streamstuff\\Poro\\commands.txt\",\"$readapi("+this.getHeadgearC(h, randseed)+"))\",\"$readapi("+this.getHeadgearT(h, randseed)+")\",\"\")";
+    }
+    
+    public String misc(String h, int randseed){
+        return "$savetofile(\"C:\\Users\\Pumpkin\\Documents\\Streamstuff\\Poro\\commands.txt\",\"$readapi("+this.getMiscC(h, randseed)+"))\",\"$readapi("+this.getMiscT(h, randseed)+")\",\"\")";
     }
 }
