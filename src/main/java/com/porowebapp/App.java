@@ -23,7 +23,8 @@ public class App {
         Spark.get("/pastry/:pastry/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
-            data.put("command", items.pastry(req.params(":pastry"), Integer.parseInt(req.params(":seed"))));
+            data.put("command", items.pastryC(req.params(":pastry"), Integer.parseInt(req.params(":seed"))));
+            data.put("text", items.pastryT(req.params(":pastry"), Integer.parseInt(req.params(":seed"))));
 
             return new ModelAndView(data, "com");
         }, new ThymeleafTemplateEngine());
@@ -31,15 +32,17 @@ public class App {
         Spark.get("/tea/:tea/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
-            data.put("command", items.tea(req.params(":tea"), Integer.parseInt(req.params(":seed"))));
-
+            data.put("command", items.teaC(req.params(":tea"), Integer.parseInt(req.params(":seed"))));
+            data.put("text", items.teaT(req.params(":tea"), Integer.parseInt(req.params(":seed"))));
+            
             return new ModelAndView(data, "com");
         }, new ThymeleafTemplateEngine());
         
         Spark.get("/headgear/:headgear/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
-            data.put("command", items.headgear(req.params(":headgear"), Integer.parseInt(req.params(":seed"))));
+            data.put("command", items.getHeadgearC(req.params(":headgear"), Integer.parseInt(req.params(":seed"))));
+            data.put("text", items.getHeadgearT(req.params(":headgear"), Integer.parseInt(req.params(":seed"))));
 
             return new ModelAndView(data, "com");
         }, new ThymeleafTemplateEngine());
@@ -47,7 +50,8 @@ public class App {
         Spark.get("/misc/:misc/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
-            data.put("command", items.misc(req.params(":misc"), Integer.parseInt(req.params(":seed"))));
+            data.put("command", items.getMiscC(req.params(":misc"), Integer.parseInt(req.params(":seed"))));
+            data.put("text", items.getMiscT(req.params(":misc"), Integer.parseInt(req.params(":seed"))));
 
             return new ModelAndView(data, "com");
         }, new ThymeleafTemplateEngine());

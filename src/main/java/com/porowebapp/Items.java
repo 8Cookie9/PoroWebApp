@@ -158,21 +158,4 @@ public class Items {
         this.txt = result;
         return result;
     }
-    
-    public String pastry(String h, int randseed){
-        //return "$savetofile(\"C:\\Users\\Jaakko\\AppData\\Roaming\\AnkhHeart\\AnkhBotR2\\Twitch\\Files\\commands.txt\",\""+this.pastryC(h, randseed)+"\",\"$user"+this.pastryT(h, randseed)+"\",\"\")";
-        return "$removepoints(\"$user\",\"100\",\"100\",\"success\",\"fail\",\"false\")";
-    }
-    
-    public String tea(String h, int randseed){
-        return "$savetofile(\"C:\\Users\\Jaakko\\AppData\\Roaming\\AnkhHeart\\AnkhBotR2\\Twitch\\Files\\commands.txt\",\"$user "+this.teaC(h, randseed)+"\",\"$user"+this.teaT(h, randseed)+"\",\"\")";
-    }
-    
-    public String headgear(String h, int randseed){
-        return "$savetofile(\"C:\\Users\\Jaakko\\AppData\\Roaming\\AnkhHeart\\AnkhBotR2\\Twitch\\Files\\commands.txt\",\"$user "+this.getHeadgearC(h, randseed)+"\",\"$user"+this.getHeadgearT(h, randseed)+"\",\"\")";
-    }
-    
-    public String misc(String h, int randseed){
-        return "$savetofile(\"C:\\Users\\Jaakko\\AppData\\Roaming\\AnkhHeart\\AnkhBotR2\\Twitch\\Files\\commands.txt\",\"$user "+this.getMiscC(h, randseed)+"\",\"$user"+this.getMiscT(h, randseed)+"\",\"\")";
-    }
 }
