@@ -20,34 +20,34 @@ public class App {
             return new ModelAndView(data, "index");
         }, new ThymeleafTemplateEngine());
         
-        Spark.get("/pastry/:h/:seed", (req, res) -> {
+        Spark.get("/pastry/:pastry/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
-            data.put("command", items.pastry(req.params(":h"), Integer.parseInt(req.params(":seed"))));
+            data.put("command", items.pastry(req.params(":pastry"), Integer.parseInt(req.params(":seed"))));
 
             return new ModelAndView(data, "com");
         }, new ThymeleafTemplateEngine());
         
-        Spark.get("/tea/:h/:seed", (req, res) -> {
+        Spark.get("/tea/:tea/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
-            data.put("command", items.tea(req.params(":h"), Integer.parseInt(req.params(":seed"))));
+            data.put("command", items.tea(req.params(":tea"), Integer.parseInt(req.params(":seed"))));
 
             return new ModelAndView(data, "com");
         }, new ThymeleafTemplateEngine());
         
-        Spark.get("/headgear/:h/:seed", (req, res) -> {
+        Spark.get("/headgear/:headgear/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
-            data.put("command", items.headgear(req.params(":h"), Integer.parseInt(req.params(":seed"))));
+            data.put("command", items.headgear(req.params(":headgear"), Integer.parseInt(req.params(":seed"))));
 
             return new ModelAndView(data, "com");
         }, new ThymeleafTemplateEngine());
         
-        Spark.get("/misc/:h/:seed", (req, res) -> {
+        Spark.get("/misc/:misc/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
-            data.put("command", items.misc(req.params(":h"), Integer.parseInt(req.params(":seed"))));
+            data.put("command", items.misc(req.params(":misc"), Integer.parseInt(req.params(":seed"))));
 
             return new ModelAndView(data, "com");
         }, new ThymeleafTemplateEngine());
