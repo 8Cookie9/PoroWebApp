@@ -20,6 +20,18 @@ public class App {
             return new ModelAndView(data, "index");
         }, new ThymeleafTemplateEngine());
         
+        Spark.get("/newporo/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            PoroFactory p = new PoroFactory(Integer.parseInt(req.params(":seed")),"newporo","$user");
+            Poro poro = p.getPoro();
+            
+            data.put("command", "newporo "+poro.getCommand());
+            data.put("text", "$user "+poro.getText());
+
+
+            return new ModelAndView(data, "com_2");
+        }, new ThymeleafTemplateEngine());
+        
         Spark.get("/pastry/:pastry/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();

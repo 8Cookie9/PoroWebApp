@@ -28,7 +28,7 @@ public class Items {
 
     public String getMiscT(String m, int randseed) {
         String[] miscellaneous = m.split("-");
-        String result = " received " + miscellaneous[1];
+        String result = " Poro received " + miscellaneous[1];
         if (Integer.parseInt(miscellaneous[0]) == 1) {
             result += " (+" + 1 + " hp).";
         } else if (Integer.parseInt(miscellaneous[0]) == 2) {
@@ -64,7 +64,7 @@ public class Items {
 
     public String getHeadgearT(String h, int randseed) {
         String[] miscellaneous = h.split("-");
-        String result = " received " + miscellaneous[1];
+        String result = " Poro received " + miscellaneous[1];
         if (Integer.parseInt(miscellaneous[0]) == 1) {
             result += " (+" + 1 + " defense).";
         } else if (Integer.parseInt(miscellaneous[0]) == 2) {
@@ -108,7 +108,7 @@ public class Items {
     
     public String teaT(String h, int randseed) {
         String[] miscellaneous = h.split("-");
-        String result = "'s Poro received " + miscellaneous[1] + " and ";
+        String result = " Poro received " + miscellaneous[1] + " and ";
         if (Integer.parseInt(miscellaneous[0]) == 1) {
             result += "its friendship grew by " + 1 + ".";
         } else if (Integer.parseInt(miscellaneous[0]) == 2) {
@@ -144,7 +144,7 @@ public class Items {
     
     public String pastryT(String h, int randseed) {
         String[] miscellaneous = h.split("_");
-        String result = "'s Poro received " + miscellaneous[1] + " and ";
+        String result = " Poro received " + miscellaneous[1] + " and ";
         if (Integer.parseInt(miscellaneous[0]) == 1) {
             result += "its friendship grew by " + (new Random((long) Math.pow(randseed,3)).nextInt(2) + 2) + ".";
         } else if (Integer.parseInt(miscellaneous[0]) == 2) {
