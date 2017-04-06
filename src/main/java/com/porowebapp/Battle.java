@@ -54,13 +54,13 @@ public class Battle {
     public String text(){
         String[] res=this.battle();
         if(this.username.equals(this.targetname)){
-            return this.username+" didn't manage to find anyone to challenge, and ended up practicing alone gaining 3 exp for their equipment.";
+            return this.username+" did not manage to find anyone to challenge, and ended up practicing alone gaining 3 exp for their equipment.";
         }
         String ret=this.username+" challenged "+this.targetname+". ";
         String winner="";
         String loser="";
         if(Integer.parseInt(res[2])==0){
-            return ret+"Both of them appeared to be evenly matched. After a long battle, the result was a tie, rewarding "+this.username+" with 2 exp for their weapon.";
+            return ret+"Both of them appeared to be evenly matched. After a long time, the result was a tie, rewarding "+this.username+" with 2 exp for their weapon.";
         }else if(Integer.parseInt(res[2])>0){
             winner=this.username;
             loser=this.targetname;
