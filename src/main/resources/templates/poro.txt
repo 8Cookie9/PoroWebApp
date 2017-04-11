@@ -12,5 +12,5 @@ PROJECT: Poro;3;5;2;4;3;/porobase.png;10
 Battlecast Poro;3;5;2;3;4;/porobase.png;11
 Wizard Poro;3;3;2;6;1;/wizardporo.png;12
 Dark Star Poro;4;6;3;6;3;/porobase.png;13
-Star Guardian Poro;4;6;4;4;4;/porobase.png;14
+Star Guardian Poro;4;6;4;4;4;/starguardianporo.png;14
 Royal Poro;5;10;5;5;5;/royalporo.png;15
