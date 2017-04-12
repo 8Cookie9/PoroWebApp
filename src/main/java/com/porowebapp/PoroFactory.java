@@ -107,14 +107,15 @@ public class PoroFactory {
     public List<List<Poro>> poroTable(){
         List<List<Poro>> porotable = new ArrayList<>();
         List<Poro> porolist = this.getAllPoros();
-        int size = (int) Math.ceil(Math.sqrt(porolist.size()));
-        for(int x=0;x<size;x++){
+        int sizey = (int) Math.ceil(Math.sqrt(porolist.size()));
+        int sizex = Math.min(sizey, 9);
+        for(int x=0;x<porolist.size();x++){
             List<Poro> list=new ArrayList<>();
-            for(int y=0;y<size;y++){
-                if(((x*size)+y)>=porolist.size()){
+            for(int y=0;y<sizex;y++){
+                if(((x*sizex)+y)>=porolist.size()){
                     break;
                 }
-                list.add(porolist.get((x*size)+y));
+                list.add(porolist.get((x*sizex)+y));
             }
             porotable.add(list);
         }
