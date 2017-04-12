@@ -89,6 +89,8 @@ public class PoroFactory {
             return "ultra rare";
         }else if(i==5){
             return "secret rare";
+        }else if(i==0){
+            return "unavailable";
         }else{
             return "";
         }
