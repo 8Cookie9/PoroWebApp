@@ -3,6 +3,9 @@ Poro Artist;1;1;1;3;1;/poroartist.png;1
 Salty Poro;1;5;2;2;2;/saltyporo.png;2
 Poro Cosplayer;1;1;1;1;3;/porobase.png;3
 Pool Party Poro;1;1;3;1;1;/poolpartyporo.png;4
+Glowing Poro;2;4;3;3;3;/porobase.png;16
+Cool Poro;2;2;3;2;2;/porobase.png;17
+Pirate Poro;2;3;1;1;5;/porobase.png;16
 Gentleman Poro;2;1;2;2;2;/porobase.png;5
 Red-Nosed Poro;2;2;3;2;1;/rednosedporo.png;6
 Astronaut Poro;2;3;2;1;4;/porobase.png;7
@@ -14,6 +17,3 @@ Wizard Poro;3;3;2;6;1;/wizardporo.png;12
 Dark Star Poro;4;6;3;6;3;/porobase.png;13
 Star Guardian Poro;4;6;4;4;4;/starguardianporo.png;14
 Royal Poro;5;10;5;5;5;/royalporo.png;15
-Glowing Poro;2;4;3;3;3;/porobase.png;16
-Cool Poro;2;2;3;2;2;/porobase.png;17
-Pirate Poro;2;3;1;1;5;/porobase.png;16
