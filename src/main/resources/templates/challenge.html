@@ -1,0 +1,19 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>Challenge result</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+
+    <body>
+        
+        <table>
+            <tr th:each="t : ${text}">
+                <td style="border:1px solid;text-align:center;width:80%;height:50px;">
+                    <div th:text="${t}">text</div>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

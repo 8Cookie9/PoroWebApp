@@ -211,6 +211,33 @@ public class App {
             return new ModelAndView(data, "headgearT");
         }, new ThymeleafTemplateEngine());
         
+        Spark.get("/challenge/:username1/:username2/:poro1/:poro2/:args1/:args2/:randseed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            Challenge challenge = new Challenge(req.params(":args1"),req.params(":args2"),req.params(":poro1"),req.params(":poro2"),req.params(":username1"),req.params(":username2"),Integer.parseInt(req.params(":randseed")));
+            challenge.battle();
+            
+            data.put("text", challenge.getLog());
+            return new ModelAndView(data, "challenge");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/challenge/text/:username1/:username2/:poro1/:poro2/:args1/:args2/:randseed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            Challenge challenge = new Challenge(req.params(":args1"),req.params(":args2"),req.params(":poro1"),req.params(":poro2"),req.params(":username1"),req.params(":username2"),Integer.parseInt(req.params(":randseed")));
+            challenge.battle();
+            
+            data.put("command", challenge.getText());
+            return new ModelAndView(data, "comm");
+        }, new ThymeleafTemplateEngine());
+        
+        Spark.get("/challenge/command/:username1/:username2/:poro1/:poro2/:args1/:args2/:randseed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            Challenge challenge = new Challenge(req.params(":args1"),req.params(":args2"),req.params(":poro1"),req.params(":poro2"),req.params(":username1"),req.params(":username2"),Integer.parseInt(req.params(":randseed")));
+            challenge.battle();
+            
+            data.put("command", challenge.getCommand());
+            return new ModelAndView(data, "comm");
+        }, new ThymeleafTemplateEngine());
+        
         Spark.get("/porolist", (req, res) -> {
             HashMap data = new HashMap<>();
             PoroFactory p = new PoroFactory(0,"porolist","username");
