@@ -119,6 +119,8 @@ public class Challenge {
         }else{
             while(this.curhp1!=0&&this.curhp2!=0){
                 this.attack();
+                this.def1=Math.max(0, this.def1-1);
+                this.def2=Math.max(0, this.def2-1);
             }
             if(this.curhp1==0){
                 this.log.add(this.poro2+"["+this.user2+"] won the challenge.");
