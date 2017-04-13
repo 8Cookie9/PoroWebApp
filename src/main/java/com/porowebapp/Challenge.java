@@ -19,11 +19,16 @@ public class Challenge {
     private String user1;
     private String user2;
     private Random random;
+    private int randseed;
     private List<String> log;
     private int curturn;
     private String command;
     private String text;
+    private String args1;
+    private String args2;
     public Challenge(String args1, String args2, String poro1, String poro2, String user1, String user2, int randseed){
+        this.args1=args1;
+        this.args2=args2;
         args1=args1.substring(1, args1.length()-1);
         args2=args2.substring(1, args2.length()-1);
         hp1=Integer.parseInt(args1.split(", ")[0]);
@@ -42,6 +47,7 @@ public class Challenge {
         this.user2=user2;
         this.poro1=poro1;
         this.poro2=poro2;
+        this.randseed=randseed;
     }
     
     private void attack(){
@@ -91,17 +97,22 @@ public class Challenge {
     }
     
     public void battle(){
-        while(this.curhp1!=0&&this.curhp2!=0){
-            this.attack();
-        }
-        if(this.curhp1==0){
-            this.log.add(this.poro2+"["+this.user2+"] won the challenge.");
-            this.command=this.user2+" addexp 3";
-            this.text=this.user2+" won the challenge gaining 3 exp for their equipment.";
+        if(this.user1.equals(this.user2)){
+            this.command=this.user1+" addexp 3";
+            this.text="You didn't find anone to challenge, but practicing hard gained 3 exp for your equipment.";
         }else{
-            this.log.add(this.poro1+"["+this.user1+"] won the challenge.");
-            this.command=this.user1+" addexp 5";
-            this.text=this.user1+" won the challenge gaining 5 exp for their equipment.";
+            while(this.curhp1!=0&&this.curhp2!=0){
+                this.attack();
+            }
+            if(this.curhp1==0){
+                this.log.add(this.poro2+"["+this.user2+"] won the challenge.");
+                this.command=this.user2+" addexp 3";
+                this.text=this.user2+" won the challenge gaining 3 exp for their equipment. http://porostuff.herokuapp.com/challenge/"+this.user1+"/"+this.user2+"/"+this.poro1+"/"+this.poro2+"/"+this.args1+"/"+this.args2+"/"+this.randseed;
+            }else{
+                this.log.add(this.poro1+"["+this.user1+"] won the challenge.");
+                this.command=this.user1+" addexp 5";
+                this.text=this.user1+" won the challenge gaining 5 exp for their equipment. http://porostuff.herokuapp.com/challenge/"+this.user1+"/"+this.user2+"/"+this.poro1+"/"+this.poro2+"/"+this.args1+"/"+this.args2+"/"+this.randseed;
+            }
         }
     }
     
