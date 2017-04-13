@@ -106,11 +106,11 @@ public class Challenge {
             }
             if(this.curhp1==0){
                 this.log.add(this.poro2+"["+this.user2+"] won the challenge.");
-                this.command=this.user2+" addexp 3";
+                this.command=this.user1+" battle "+this.user2+" lose";
                 this.text=this.user2+" won the challenge gaining 3 exp for their equipment. http://porostuff.herokuapp.com/challenge/"+this.user1+"/"+this.user2+"/"+this.poro1+"/"+this.poro2+"/"+this.args1+"/"+this.args2+"/"+this.randseed;
             }else{
                 this.log.add(this.poro1+"["+this.user1+"] won the challenge.");
-                this.command=this.user1+" addexp 5";
+                this.command=this.user1+" battle "+this.user2+" win";
                 this.text=this.user1+" won the challenge gaining 5 exp for their equipment. http://porostuff.herokuapp.com/challenge/"+this.user1+"/"+this.user2+"/"+this.poro1+"/"+this.poro2+"/"+this.args1+"/"+this.args2+"/"+this.randseed;
             }
         }
