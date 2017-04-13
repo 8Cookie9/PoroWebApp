@@ -95,18 +95,18 @@ public class Challenge {
             int luck=this.random.nextInt(100);
             if(luck<10){
                 this.log.add(this.poro2+"["+this.user2+"] missed.");
-                this.log.add(this.poro1+"["+this.user1+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user1+"] ("+this.curhp2+"/"+this.hp2+")");
+                this.log.add(this.poro1+"["+this.user2+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user1+"] ("+this.curhp2+"/"+this.hp2+")");
             }else if(luck>=90){
                 attack*=2;
                 attack=(int) (((double) attack)*atkmod);
                 this.curhp1=Math.max(0,this.curhp1-attack);
                 this.log.add(this.poro2+"["+this.user2+"] managed to land a critical strike dealing "+attack+" damage.");
-                this.log.add(this.poro1+"["+this.user1+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user1+"] ("+this.curhp2+"/"+this.hp2+")");
+                this.log.add(this.poro1+"["+this.user2+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user1+"] ("+this.curhp2+"/"+this.hp2+")");
             }else{
                 attack=(int) (((double) attack)*atkmod);
                 this.curhp1=Math.max(0,this.curhp1-attack);
                 this.log.add(this.poro2+"["+this.user2+"] attacked dealing "+attack+" damage.");
-                this.log.add(this.poro1+"["+this.user1+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user1+"] ("+this.curhp2+"/"+this.hp2+")");
+                this.log.add(this.poro1+"["+this.user2+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user1+"] ("+this.curhp2+"/"+this.hp2+")");
             }
             this.curturn=0;
         }
@@ -125,11 +125,15 @@ public class Challenge {
             if(this.curhp1==0){
                 this.log.add(this.poro2+"["+this.user2+"] won the challenge.");
                 this.command=this.user1+" battle "+this.user2+" lose";
-                this.text=this.user2+" won the challenge gaining 3 exp for their equipment. http://porostuff.herokuapp.com/challenge/"+this.user1+"/"+this.user2+"/"+this.poro1+"/"+this.poro2+"/"+this.hp1+"/"+this.hp2+"/"+this.atk1+"/"+this.atk2+"/"+this.def1+"/"+this.def2+"/"+this.randseed;
+                String p1=this.poro1.replaceAll(" ", "%20");
+                String p2=this.poro2.replaceAll(" ", "%20");
+                this.text=this.user2+" won the challenge gaining 3 exp for their equipment. http://porostuff.herokuapp.com/challenge/"+this.user1+"/"+this.user2+"/"+p1+"/"+p2+"/"+this.hp1+"/"+this.hp2+"/"+this.atk1+"/"+this.atk2+"/"+this.def1+"/"+this.def2+"/"+this.randseed;
             }else{
                 this.log.add(this.poro1+"["+this.user1+"] won the challenge.");
                 this.command=this.user1+" battle "+this.user2+" win";
-                this.text=this.user1+" won the challenge gaining 5 exp for their equipment. http://porostuff.herokuapp.com/challenge/"+this.user1+"/"+this.user2+"/"+this.poro1+"/"+this.poro2+"/"+this.hp1+"/"+this.hp2+"/"+this.atk1+"/"+this.atk2+"/"+this.def1+"/"+this.def2+"/"+this.randseed;
+                String p1=this.poro1.replaceAll(" ", "%20");
+                String p2=this.poro2.replaceAll(" ", "%20");
+                this.text=this.user1+" won the challenge gaining 5 exp for their equipment. http://porostuff.herokuapp.com/challenge/"+this.user1+"/"+this.user2+"/"+p1+"/"+p2+"/"+this.hp1+"/"+this.hp2+"/"+this.atk1+"/"+this.atk2+"/"+this.def1+"/"+this.def2+"/"+this.randseed;
             }
         }
     }
