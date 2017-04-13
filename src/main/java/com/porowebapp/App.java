@@ -211,9 +211,9 @@ public class App {
             return new ModelAndView(data, "headgearT");
         }, new ThymeleafTemplateEngine());
         
-        Spark.get("/challenge/:username1/:username2/:poro1/:poro2/:args1/:args2/:randseed", (req, res) -> {
+        Spark.get("/challenge/:username1/:username2/:poro1/:poro2/:hp1/:hp2/:atk1/:atk2/:def1/:def2/:randseed", (req, res) -> {
             HashMap data = new HashMap<>();
-            Challenge challenge = new Challenge(req.params(":args1"),req.params(":args2"),req.params(":poro1"),req.params(":poro2"),req.params(":username1"),req.params(":username2"),Integer.parseInt(req.params(":randseed")));
+            Challenge challenge = new Challenge(req.params(":poro1"),req.params(":poro2"),req.params(":username1"),req.params(":username2"),Integer.parseInt(req.params(":hp1")),Integer.parseInt(req.params(":hp2")),Integer.parseInt(req.params(":atk1")),Integer.parseInt(req.params(":atk2")),Integer.parseInt(req.params(":def1")),Integer.parseInt(req.params(":def2")),Integer.parseInt(req.params(":randseed")));
             challenge.battle();
             
             data.put("text", challenge.getLog());
