@@ -74,18 +74,18 @@ public class Challenge {
             double atkmod=20.0/(20.0+(double) def2);
             if(luck<10){
                 this.log.add(this.poro1+"["+this.user1+"] missed.");
-                this.log.add(this.poro1+"["+this.user1+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user1+"] ("+this.curhp2+"/"+this.hp2+")");
+                this.log.add(this.poro1+"["+this.user1+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user2+"] ("+this.curhp2+"/"+this.hp2+")");
             }else if(luck>=90){
                 attack*=2;
                 attack=(int) (((double) attack)*atkmod);
                 this.curhp2=Math.max(0,this.curhp2-attack);
                 this.log.add(this.poro1+"["+this.user1+"] managed to land a critical strike dealing "+attack+" damage. ");
-                this.log.add(this.poro1+"["+this.user1+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user1+"] ("+this.curhp2+"/"+this.hp2+")");
+                this.log.add(this.poro1+"["+this.user1+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user2+"] ("+this.curhp2+"/"+this.hp2+")");
             }else{
                 attack=(int) (((double) attack)*atkmod);
                 this.curhp2=Math.max(0,this.curhp2-attack);
                 this.log.add(this.poro1+"["+this.user1+"] attacked dealing "+attack+" damage.");
-                this.log.add(this.poro1+"["+this.user1+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user1+"] ("+this.curhp2+"/"+this.hp2+")");
+                this.log.add(this.poro1+"["+this.user1+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user2+"] ("+this.curhp2+"/"+this.hp2+")");
             }
             this.curturn=1;
         }else{
@@ -95,18 +95,18 @@ public class Challenge {
             int luck=this.random.nextInt(100);
             if(luck<10){
                 this.log.add(this.poro2+"["+this.user2+"] missed.");
-                this.log.add(this.poro1+"["+this.user2+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user1+"] ("+this.curhp2+"/"+this.hp2+")");
+                this.log.add(this.poro1+"["+this.user1+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user2+"] ("+this.curhp2+"/"+this.hp2+")");
             }else if(luck>=90){
                 attack*=2;
                 attack=(int) (((double) attack)*atkmod);
                 this.curhp1=Math.max(0,this.curhp1-attack);
                 this.log.add(this.poro2+"["+this.user2+"] managed to land a critical strike dealing "+attack+" damage.");
-                this.log.add(this.poro1+"["+this.user2+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user1+"] ("+this.curhp2+"/"+this.hp2+")");
+                this.log.add(this.poro1+"["+this.user1+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user2+"] ("+this.curhp2+"/"+this.hp2+")");
             }else{
                 attack=(int) (((double) attack)*atkmod);
                 this.curhp1=Math.max(0,this.curhp1-attack);
                 this.log.add(this.poro2+"["+this.user2+"] attacked dealing "+attack+" damage.");
-                this.log.add(this.poro1+"["+this.user2+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user1+"] ("+this.curhp2+"/"+this.hp2+")");
+                this.log.add(this.poro1+"["+this.user1+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user2+"] ("+this.curhp2+"/"+this.hp2+")");
             }
             this.curturn=0;
         }
