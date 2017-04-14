@@ -129,11 +129,19 @@ public class Challenge {
                 String p2=this.poro2.replaceAll(" ", "%20");
                 this.text=this.user1+" challenged "+this.user2+". "+this.user2+" won the challenge gaining 3 exp for their equipment. http://porostuff.herokuapp.com/challenge/"+this.user1+"/"+this.user2+"/"+p1+"/"+p2+"/"+this.hp1+"/"+this.hp2+"/"+this.atk1+"/"+this.atk2+"/"+this.def1+"/"+this.def2+"/"+this.randseed;
             }else{
+                int steal=this.random.nextInt(100);
                 this.log.add(this.poro1+"["+this.user1+"] won the challenge.");
-                this.command=this.user1+" battle "+this.user2+" win false";
+                this.command=this.user1+" battle "+this.user2+" win ";
                 String p1=this.poro1.replaceAll(" ", "%20");
                 String p2=this.poro2.replaceAll(" ", "%20");
-                this.text=this.user1+" challenged "+this.user2+". "+this.user1+" won the challenge gaining 5 exp for their equipment. http://porostuff.herokuapp.com/challenge/"+this.user1+"/"+this.user2+"/"+p1+"/"+p2+"/"+this.hp1+"/"+this.hp2+"/"+this.atk1+"/"+this.atk2+"/"+this.def1+"/"+this.def2+"/"+this.randseed;
+                this.text=this.user1+" challenged "+this.user2+". "+this.user1+" won the challenge gaining 5 exp for their equipment. ";
+                if(steal==99){
+                    this.command+="true";
+                    this.text+=this.user1+" managed to steal an item from "+this.user2+". ";
+                }else{
+                    this.command+="false";
+                }
+                this.text+="http://porostuff.herokuapp.com/challenge/"+this.user1+"/"+this.user2+"/"+p1+"/"+p2+"/"+this.hp1+"/"+this.hp2+"/"+this.atk1+"/"+this.atk2+"/"+this.def1+"/"+this.def2+"/"+this.randseed;
             }
         }
     }
