@@ -62,19 +62,19 @@ public class PoroFactory {
             }else if(this.username.toLowerCase().equals("riripumpkin")){
                 return new Poro("Tea addict Poro",10,10,10,10,10,10,10,"special","src/main/resources/templates/Poros/porobase.png",999);
             }else if(this.username.toLowerCase().equals("psychoshizu")){
-                return new Poro("Psycho Poro",r.nextInt(11),r.nextInt(11),r.nextInt(11),3,3,8,5,"special","src/main/resources/templates/Poros/porobase.png",999);
+                return new Poro("Psycho Poro",(r.nextInt(10)+1),(r.nextInt(10)+1),(r.nextInt(10)+1),3,3,8,5,"special","src/main/resources/templates/Poros/porobase.png",999);
             }else if(this.username.toLowerCase().equals("goddessjolie")){
-                return new Poro("Star Guardian Poro",r.nextInt(11),r.nextInt(11),r.nextInt(11),4,4,4,6,"ultra rare","src/main/resources/templates/Poros/porobase.png",14);
+                return new Poro("Star Guardian Poro",(r.nextInt(10)+1),(r.nextInt(10)+1),(r.nextInt(10)+1),4,4,4,6,"ultra rare","src/main/resources/templates/Poros/porobase.png",14);
             }
         }
         int rarity=this.randomRarity();
         Random random=new Random((long) Math.pow(this.randSeed, 2));
         List<String[]> porolist=this.poroes.get(rarity);
         if(porolist.isEmpty()){
-            return new Poro("Regular Poro",r.nextInt(11),r.nextInt(11),r.nextInt(11),1,1,1,1,getRarity(rarity),"src/main/resources/templates/Poros/porobase.png",0);
+            return new Poro("Regular Poro",(r.nextInt(10)+1),(r.nextInt(10)+1),(r.nextInt(10)+1),1,1,1,1,getRarity(rarity),"src/main/resources/templates/Poros/porobase.png",0);
         }
         String[] poroInfo=porolist.get(random.nextInt(porolist.size()));
-        Poro poro=new Poro(poroInfo[0],r.nextInt(11),r.nextInt(11),r.nextInt(11),Integer.parseInt(poroInfo[3]),Integer.parseInt(poroInfo[4]),Integer.parseInt(poroInfo[5]),Integer.parseInt(poroInfo[2]),getRarity(rarity),poroInfo[6],Integer.parseInt(poroInfo[7]));
+        Poro poro=new Poro(poroInfo[0],(r.nextInt(10)+1),(r.nextInt(10)+1),(r.nextInt(10)+1),Integer.parseInt(poroInfo[3]),Integer.parseInt(poroInfo[4]),Integer.parseInt(poroInfo[5]),Integer.parseInt(poroInfo[2]),getRarity(rarity),poroInfo[6],Integer.parseInt(poroInfo[7]));
         return poro;
     }
     
@@ -101,7 +101,7 @@ public class PoroFactory {
         GetData get = new GetData(this.filepath);
         for(String args:get.data()){
             String[] poroInfo=args.split(";");
-            porolist.add(new Poro(poroInfo[0],0,0,0,Integer.parseInt(poroInfo[3]),Integer.parseInt(poroInfo[4]),Integer.parseInt(poroInfo[5]),Integer.parseInt(poroInfo[2]),getRarity(Integer.parseInt(poroInfo[1])),poroInfo[6],Integer.parseInt(poroInfo[7])));
+            porolist.add(new Poro(poroInfo[0],1,1,1,Integer.parseInt(poroInfo[3]),Integer.parseInt(poroInfo[4]),Integer.parseInt(poroInfo[5]),Integer.parseInt(poroInfo[2]),getRarity(Integer.parseInt(poroInfo[1])),poroInfo[6],Integer.parseInt(poroInfo[7])));
         }
         return porolist;
     }
