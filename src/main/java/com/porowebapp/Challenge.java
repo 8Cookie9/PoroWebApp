@@ -115,7 +115,7 @@ public class Challenge {
     public void battle(){
         if(this.user1.equals(this.user2)){
             this.command=this.user1+" practice";
-            this.text="You didn't find anone to challenge, but practicing hard gained 3 exp for your equipment.";
+            this.text="You didn't find anyone to challenge, but practicing hard gained 3 exp for your equipment.";
         }else{
             while(this.curhp1!=0&&this.curhp2!=0){
                 this.attack();
