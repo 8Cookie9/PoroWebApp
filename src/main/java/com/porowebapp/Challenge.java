@@ -14,6 +14,7 @@ public class Challenge {
     private int atk2;
     private int def1;
     private int def2;
+    private int defmod;
     private String poro1;
     private String poro2;
     private String user1;
@@ -44,6 +45,7 @@ public class Challenge {
         this.poro1=poro1;
         this.poro2=poro2;
         this.randseed=randseed;
+        this.defmod=0;
     }
     
     public Challenge(String poro1, String poro2, String user1, String user2, int hp1, int hp2, int atk1, int atk2, int def1, int def2, int randseed){
@@ -68,10 +70,10 @@ public class Challenge {
     
     private void attack(){
         if(this.curturn==0){
+            double atkmod=20.0/(20.0+(double) Math.max(0, this.def2-this.defmod));
             int attack=(int) (5.0 * (this.random.nextGaussian() / 4 + 1));
             attack=(int) (((double) attack)*((20.0+(double) atk1)/20.0));
             int luck=this.random.nextInt(100);
-            double atkmod=20.0/(20.0+(double) def2);
             if(luck<10){
                 this.log.add(this.poro1+"["+this.user1+"] missed.");
                 this.log.add(this.poro1+"["+this.user1+"] ("+this.curhp1+"/"+this.hp1+") | "+this.poro2+"["+this.user2+"] ("+this.curhp2+"/"+this.hp2+")");
@@ -89,7 +91,7 @@ public class Challenge {
             }
             this.curturn=1;
         }else{
-            double atkmod=20.0/(20.0+(double) def1);
+            double atkmod=20.0/(20.0+(double) Math.max(0, this.def1-this.defmod));
             int attack=(int) (5.0 * (this.random.nextGaussian() / 4 + 1));
             attack=(int) (((double) attack)*((20.0+(double) atk2)/20.0));
             int luck=this.random.nextInt(100);
@@ -119,8 +121,7 @@ public class Challenge {
         }else{
             while(this.curhp1!=0&&this.curhp2!=0){
                 this.attack();
-                this.def1=Math.max(0, this.def1-1);
-                this.def2=Math.max(0, this.def2-1);
+                this.defmod++;
             }
             if(this.curhp1==0){
                 this.log.add(this.poro2+"["+this.user2+"] won the challenge.");
