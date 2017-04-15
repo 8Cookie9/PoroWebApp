@@ -41,6 +41,15 @@ public class App {
             return new ModelAndView(data, "com");
         }, new ThymeleafTemplateEngine());
         
+        Spark.get("/pastry/give/:pastry/:seed", (req, res) -> {
+            HashMap data = new HashMap<>();
+            Items items=new Items();
+            data.put("command", items.pastryC(req.params(":pastry"), Integer.parseInt(req.params(":seed"))));
+            data.put("text", items.pastryT(req.params(":pastry"), Integer.parseInt(req.params(":seed"))));
+
+            return new ModelAndView(data, "give");
+        }, new ThymeleafTemplateEngine());
+        
         Spark.get("/tea/:tea/:seed", (req, res) -> {
             HashMap data = new HashMap<>();
             Items items=new Items();
