@@ -14,7 +14,7 @@ Astronaut Poro;2;3;2;1;4;/porobase.png;7
 Shadow Isles Poro;2;2;3;2;2;/porobase.png;8
 Dragonslayer Poro;3;6;4;3;4;/porobase.png;9
 PROJECT: Poro;3;5;2;4;3;/porobase.png;10
-Deep Sea Poro;3;4;4;2;5;/porobase.png;18
+Deep Sea Poro;3;4;4;2;5;/deepseaporo.png;18
 Battlecast Poro;3;5;2;3;4;/porobase.png;11
 Wizard Poro;3;3;2;6;1;/wizardporo.png;12
 Scammed Poro;4;1;0;0;0;/porobase.png;28
