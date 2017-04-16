@@ -23,6 +23,6 @@ Star Guardian Poro;4;6;4;4;4;/starguardianporo.png;14
 Royal Poro;5;10;5;5;5;/royalporo.png;15
 Heartseeker Poro;0;3;4;3;3;/porobase.png;21
 Sweetheart Poro;0;2;2;3;1;/porobase.png;22
-Cottontail Poro;0;1;5;1;1;/porobase.png;23
+Cottontail Poro;0;1;5;1;1;/cottontailporo.png;23
 Winter Wonder Poro;0;3;2;4;4;/porobase.png;24
 Candy cane Poro;0;2;5;3;1;/porobase.png;26
