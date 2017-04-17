@@ -62,7 +62,7 @@ public class PoroFactory {
             }else if(this.username.toLowerCase().equals("riripumpkin")){
                 return new Poro("Tea addict Poro",10,10,10,10,10,10,10,"special","src/main/resources/templates/Poros/porobase.png",999);
             }else if(this.username.toLowerCase().equals("psychoshizu")){
-                return new Poro("Psycho Poro",(r.nextInt(10)+1),(r.nextInt(10)+1),(r.nextInt(10)+1),3,3,8,5,"special","src/main/resources/templates/Poros/porobase.png",999);
+                return new Poro("Psycho Poro",(r.nextInt(10)+1),(r.nextInt(10)+1),(r.nextInt(10)+1),3,3,8,3,"special","src/main/resources/templates/Poros/porobase.png",999);
             }else if(this.username.toLowerCase().equals("goddessjolie")){
                 return new Poro("Star Guardian Poro",(r.nextInt(10)+1),(r.nextInt(10)+1),(r.nextInt(10)+1),4,4,4,6,"ultra rare","src/main/resources/templates/Poros/porobase.png",14);
             }
