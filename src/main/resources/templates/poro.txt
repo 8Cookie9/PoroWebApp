@@ -10,7 +10,7 @@ Sugary Poro;2;1;4;1;1;/porobase.png;20
 Pirate Poro;2;3;1;1;5;/porobase.png;25
 Gentleman Poro;2;1;2;2;2;/gentlemanporo.png;5
 Red-Nosed Poro;2;2;3;2;1;/rednosedporo.png;6
-Astronaut Poro;2;3;2;1;4;/porobase.png;7
+Astronaut Poro;2;3;2;1;4;/astronaut.png;7
 Shadow Isles Poro;2;2;3;2;2;/porobase.png;8
 Dragonslayer Poro;3;6;4;3;4;/porobase.png;9
 PROJECT: Poro;3;5;2;4;3;/porobase.png;10
