@@ -2,7 +2,7 @@ Regular Poro;1;2;2;2;2;/porobase.png;0
 Poro Artist;1;1;1;3;1;/poroartist.png;1
 Salty Poro;1;5;2;2;2;/saltyporo.png;2
 Sleepy Poro;1;6;5;5;1;/sleepyporo.png;19
-Poro Cosplayer;1;1;1;1;3;/porobase.png;3
+Poro Cosplayer;1;1;1;1;3;/cosplayerporo.png;3
 Pool Party Poro;1;1;3;1;1;/poolpartyporo.png;4
 Glowing Poro;2;4;3;3;3;/glowingporo.png;16
 Cool Poro;2;2;3;2;2;/coolporo.png;17
@@ -11,7 +11,7 @@ Pirate Poro;2;3;1;1;5;/porobase.png;25
 Gentleman Poro;2;1;2;2;2;/gentlemanporo.png;5
 Red-Nosed Poro;2;2;3;2;1;/rednosedporo.png;6
 Astronaut Poro;2;3;2;1;4;/astronautporo.png;7
-Shadow Isles Poro;2;2;3;2;2;/porobase.png;8
+Shadow Isles Poro;2;2;3;2;2;/shadowislesporo.png;8
 Dragonslayer Poro;3;6;4;3;4;/porobase.png;9
 PROJECT: Poro;3;5;2;4;3;/porobase.png;10
 Deep Sea Poro;3;4;4;2;5;/deepseaporo.png;18
